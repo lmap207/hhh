@@ -151,6 +151,10 @@
                 欢迎回到后台
                 @show    
             </div>
+
+            @section('content')
+
+            @show
             
         </div>
     </div>

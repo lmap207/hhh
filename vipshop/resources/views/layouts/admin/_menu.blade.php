@@ -7,12 +7,12 @@
         </a>
         <ul class="tpl-left-nav-sub-menu" style="display: none;">
             <li>
-                <a href="form-amazeui.html">
+                <a href="/shop/create">
                     <i class="am-icon-angle-right"></i>
                     <span>添加商品</span>
                     <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i>
                 </a>
-                <a href="form-line.html">
+                <a href="/user">
                     <i class="am-icon-angle-right"></i>
                     <span>商品列表</span>
                 </a>
