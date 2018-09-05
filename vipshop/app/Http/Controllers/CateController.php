@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cate;
 use Illuminate\Http\Request;
 
 class CateController extends Controller
@@ -13,7 +14,12 @@ class CateController extends Controller
      */
     public function index()
     {
-        //
+        //读取数据库 获取用户数据
+        $cates = Cate::orderBy('id','asc')
+            ->where('cate','like', '%'.request()->keywords.'%')
+            ->get();
+        //解析模板显示用户数据
+        return view('admin.cate.index', ['cates'=>$cates]);
     }
 
     /**
@@ -23,7 +29,7 @@ class CateController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.cate.create');
     }
 
     /**
@@ -34,7 +40,15 @@ class CateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cate = new Cate;
+
+        $cate -> cate = $request->cate;
+
+        if($cate -> save()){
+            return redirect('/cate')->with('success', '添加成功');
+        }else{
+            return back()->with('error','添加失败');
+        }
     }
 
     /**
@@ -56,7 +70,9 @@ class CateController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cate = Cate::findOrFail($id);
+
+        return view('admin.cate.edit', ['cate'=>$cate]);
     }
 
     /**
@@ -68,7 +84,15 @@ class CateController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cate = Cate::findOrFail($id);
+        
+        $cate -> cate = $request -> cate;
+
+        if($cate -> save()){
+            return redirect('/cate')->with('success', '更新成功');
+        }else{
+            return back()->with('error','更新失败');
+        }    
     }
 
     /**
@@ -79,6 +103,12 @@ class CateController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cate = Cate::findOrFail($id);
+
+        if($cate -> delete()){
+            return redirect('/cate')->with('success', '删除成功');
+        }else{
+            return back()->with('error','删除失败');
+        } 
     }
 }
