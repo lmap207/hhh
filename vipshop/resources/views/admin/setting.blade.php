@@ -39,14 +39,14 @@
                             <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
                             <input type="file" name="logo" class="tpl-form-input" id="user-name" placeholder="" value="{{$setting ? $setting->logo : ''}}">
-                            <img src="{{$setting->logo}}">
+                            <img src="{{$setting->logo}}" width="60px">
                         </div>
                     </div>
                     <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">二维码 <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
                             <input type="file" name="qrcode" class="tpl-form-input" id="user-name" placeholder="" value="{{$setting ? $setting->qrcode : ''}}">
-                            <img src="{{$setting->qrcode}}">
+                            <img src="{{$setting->qrcode}}" width="60px">
                         </div>
                     </div>
                     {{csrf_field()}}

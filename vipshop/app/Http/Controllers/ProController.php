@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Pro;
 use Illuminate\Http\Request;
 
 class ProController extends Controller
@@ -13,7 +14,11 @@ class ProController extends Controller
      */
     public function index()
     {
-        //
+        $pros = Pro::orderBy('id','desc')
+        ->where('pname','like','%'.request()->keyword.'%')
+        ->paginate(5);
+
+        return view('layouts.pro.index',compact('pros'));
     }
 
     /**
@@ -23,7 +28,7 @@ class ProController extends Controller
      */
     public function create()
     {
-        //
+        return view('layouts.pro.create');
     }
 
     /**
@@ -34,7 +39,18 @@ class ProController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pros = new Pro;
+
+        $pros ->pname = $request ->pname;
+
+        if($pros ->save()){
+
+              return redirect('pro')->with('success','添加成功');
+
+        }else{
+
+             return back()->with('error','添加失败');
+        }
     }
 
     /**
@@ -56,7 +72,9 @@ class ProController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pros = Pro::findOrFail($id);
+
+        return view('layouts.pro.edit',compact('pros'));
     }
 
     /**
@@ -68,7 +86,19 @@ class ProController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pros = Pro::findOrFail($id);
+
+        $pros->pname = $request->pname;
+
+        if($pros->save()){
+
+               return redirect('/pro')->with('success','修改成功');
+
+        }else{
+
+             
+             return back()->with('error','修改失败');
+        }
     }
 
     /**
@@ -79,6 +109,15 @@ class ProController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pros = Pro::findOrFail($id);
+
+        if($pros->delete()){
+
+            return back()->with('success','删除成功');
+
+        }else{
+
+           return back()->with('error','删除失败');
+        }
     }
 }
