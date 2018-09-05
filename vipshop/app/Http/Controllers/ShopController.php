@@ -17,7 +17,7 @@ class ShopController extends Controller
     {
         $shops = Good::orderBy('id','desc')
         ->where('name','like', '%'.request()->keywords.'%')
-        ->paginate(5);
+        ->paginate(2);
 
         return view('admin.shop.index', ['shops' => $shops]);
     }

@@ -56,7 +56,7 @@
                             <td class="am-hide-sm-only">{{$v['id']}}</td>
                             <td class="am-hide-sm-only">{{$v['name']}}</td>
                             <td class="am-hide-sm-only">{{$v->cate->cate}}</td>
-                            <td class="am-hide-sm-only">{{$v['price']}}</td>
+                            <td class="am-hide-sm-only">{{$v['price']}} 元</td>
                             <td class="am-hide-sm-only">{{$v['sice']}}</td>
                             <td class="am-hide-sm-only"><img src="{{$v['picture']}}" width="50" alt=""></td>
 
