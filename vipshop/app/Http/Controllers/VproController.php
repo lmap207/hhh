@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Pro;
+use App\Vpro;
 use Illuminate\Http\Request;
 
 class VproController extends Controller
@@ -13,7 +15,12 @@ class VproController extends Controller
      */
     public function index()
     {
-        //
+
+        $vpros = Vpro::orderBy('id','desc')
+        ->where('value','like','%'.request()->kerword.'%')
+        ->paginate(5);
+
+        return view('layouts.vpro.index',compact('vpros'));
     }
 
     /**
@@ -22,8 +29,10 @@ class VproController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {   
+        $pros = Pro::all();
+
+        return view('layouts.vpro.create',compact('pros'));
     }
 
     /**
@@ -34,7 +43,23 @@ class VproController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $vpros = new Vpro;
+
+        $vpros->value = $request->value;
+
+        $vpros->pro_id = $request->pro_id;
+
+        if($vpros->save()){
+
+         // $res = $vpros ->vpros()->sync($request->vpro_id);
+
+         return redirect('vpro')->with('success','修改成功');
+
+        }else{
+
+         return back()->with('error','修改失败');
+
+        }
     }
 
     /**
@@ -56,7 +81,11 @@ class VproController extends Controller
      */
     public function edit($id)
     {
-        //
+        $vpros = Vpro::findOrFail($id);
+
+        $pros = Pro::all();
+
+        return view('layouts.vpro.edit',compact('vpros','pros'));
     }
 
     /**
@@ -68,7 +97,21 @@ class VproController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $vpros = Vpro::findOrFail($id);
+        
+        $vpros ->value = $request->value;
+
+        $vpros->pro_id = $request->pro_id;
+
+        if($vpros->save()){
+
+         return redirect('vpro')->with('success','修改成功');
+
+        }else{
+
+         return back()->with('error','修改失败');
+
+        }
     }
 
     /**
@@ -79,6 +122,16 @@ class VproController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $vpros = Vpro::findOrFail($id);
+
+        if($vpros->delete()){
+
+            return back()->with('success','删除成功');
+
+        }else{
+
+            return back()->with('error','删除失败');
+            
+        }
     }
 }
