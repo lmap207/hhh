@@ -91,12 +91,12 @@
         </a>
         <ul class="tpl-left-nav-sub-menu" style="display: none;">
             <li>
-                <a href="form-amazeui.html">
+                <a href="{{url('pro/create')}}">
                     <i class="am-icon-angle-right"></i>
                     <span>添加属性</span>
                     <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i>
                 </a>
-                <a href="form-line.html">
+                <a href="{{url('pro')}}">
                     <i class="am-icon-angle-right"></i>
                     <span>属性列表</span>
                 </a>
@@ -112,12 +112,12 @@
         </a>
         <ul class="tpl-left-nav-sub-menu" style="display: none;">
             <li>
-                <a href="form-amazeui.html">
+                <a href="{{url('vpro/create')}}">
                     <i class="am-icon-angle-right"></i>
                     <span>添加属性值</span>
                     <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i>
                 </a>
-                <a href="form-line.html">
+                <a href="{{url('vpro')}}">
                     <i class="am-icon-angle-right"></i>
                     <span>属性值列表</span>
                 </a>
