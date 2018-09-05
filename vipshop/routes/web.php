@@ -22,8 +22,8 @@ Route::get('/', function () {
 Route::get('/admin','AdminController@index');
 
 // 设置
-Route::get('/admin/setting','AdminController@setting');
-
+Route::get('/admin/settings', 'AdminController@setting');
+Route::post('/admin/settings', 'AdminController@update');
 //商品
 Route::resource('shop','ShopController');
 

@@ -173,7 +173,11 @@
             <div class="tpl-content-page-title">
                 @section('title')
                 欢迎回到后台
-                @show
+
+                @show  
+                
+            </div>
+          
             </div>
             
 
@@ -182,6 +186,7 @@
 
             @show
             
+
 
         </div>
     </div>

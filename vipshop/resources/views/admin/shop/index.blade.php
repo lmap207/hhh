@@ -6,7 +6,7 @@
 <div class="tpl-portlet-components">
     <div class="portlet-title">
         <div class="caption font-green bold">
-            <span class="am-icon-code"></span> 列表
+            <span>商品列表</span> 
         </div>
         
     </div>

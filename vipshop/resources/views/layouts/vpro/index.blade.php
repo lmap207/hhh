@@ -2,7 +2,7 @@
 <div class="tpl-portlet-components">
     <div class="portlet-title">
         <div class="caption font-green bold">
-            <span class="am-icon-code"></span> 属性值列表
+            <span>属性值列表</span> 
         </div>
     </div>
     <div class="tpl-block">
