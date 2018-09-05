@@ -7,13 +7,7 @@
         <div class="caption font-green bold">
             <span class="am-icon-code"></span> 列表
         </div>
-        <div class="tpl-portlet-input tpl-fz-ml">
-            <div class="portlet-input input-small input-inline">
-                <div class="input-icon right">
-                    <i class="am-icon-search"></i>
-                    <input type="text" class="form-control form-control-solid" placeholder="搜索..."> </div>
-            </div>
-        </div>
+        
     </div>
     <div class="tpl-block">
         <div class="am-g">
@@ -34,7 +28,7 @@
                 <form action="/user" method="get">
                 <div class="am-input-group am-input-group-sm">
                     <input type="text" name="keywords" class="am-form-field" value="{{request()->keywords}}">
-                    {{request()->keywords}}
+                    
                     <!-- 让搜索的输入值显示 -->
                     <span class="am-input-group-btn">
                         <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search"></button>
@@ -70,7 +64,15 @@
                                 </td>
                                 <td>{{$v['id']}}</td>
                                 <td class="am-hide-sm-only">{{$v['username']}}</td>
-                                <td class="am-hide-sm-only">{{$v['qx']}}</td>
+                                <td class="am-hide-sm-only">
+                                @if ($v->qx == 1)
+                                    管理员
+                                @endif         
+                                @if ($v->qx == 0)
+                                    普通用户
+                                @endif
+                                
+                                </td>
                                 <td class="am-hide-sm-only"><img src="{{$v->pic}}" style="width:60px;height:60px;border-radius:360px"></td>
                                 <td class="am-hide-sm-only">{{$v['tel']}}</td>
                                 <td class="am-hide-sm-only">{{$v['email']}}</td>
@@ -151,7 +153,7 @@
                     <div class="am-cf">
                         <div class="am-fr">
                            <!-- 分页 -->
-                           {{$users->links()}}
+                           {{ $users->appends(request()->all())->links() }}
                         </div>
                     </div>
                     <hr>

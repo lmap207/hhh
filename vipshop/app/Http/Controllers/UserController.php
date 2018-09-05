@@ -47,10 +47,12 @@ class UserController extends Controller
         $user->password = Hash::make($request->password);
         $user->tel = $request->tel;
         $user->email = $request->email;
-            if($request->hasFile('pic')){
-            //将上传的文件放在不同的文件里  方便管理 
-            $user->pic = $request->pic->store('/'.'uploads/'.date('Ymd'));
-            }
+
+        if($request->hasFile('pic')){
+        //将上传的文件放在不同的文件里  方便管理 
+        $user->pic = $request->pic->store('/'.'uploads/'.date('Ymd'));
+        }
+
         if($user->save()){
             return redirect('/user')->with('success','添加成功');
         }else{
@@ -78,7 +80,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-         $users = User::find($id);
+         $users = User::findOrFail($id);
          return view('admin.user.edit',compact('users'));
 
 
@@ -93,19 +95,24 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $a=$request->all();
-         $update = User::find($id);
-         $update-> username = $a['username'];
-         $update-> qx = $a['qx'];
-         $update-> tel = $a['tel'];
-         $update-> email = $a['email'];
-         $update->  pic = $a['pic'];
-         $update->save();
-        if($update){
+
+         $users = User::findOrFail($id);
+            //dd($users); die;
+         $users -> username = $request->username;
+         $users -> qx = $request->qx;
+         $users -> tel = $request->tel;
+         $users -> email = $request->email;
+         
+        if($request->hasFile('pic')){
+        //将上传的文件放在不同的文件里  方便管理 
+        $users->pic = $request->pic->store('/'.'uploads/'.date('Ymd'));
+        }
+         
+        if($users->save()){
             return redirect('/user')->with('success','修改成功');
-            }else{
+        }else{
             return back()->with('error','修改失败');
-           }
+        }
     }
 
     /**
