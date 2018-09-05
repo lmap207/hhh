@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Good;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
@@ -13,7 +14,11 @@ class ShopController extends Controller
      */
     public function index()
     {
-        //
+        $shops = Good::orderBy('id','desc')
+        ->where('name','like', '%'.request()->keywords.'%')
+        ->paginate(5);
+
+        return view('admin.shop.index', ['shops' => $shops]);
     }
 
     /**
@@ -34,7 +39,24 @@ class ShopController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $shop = new Good;
+
+        $shop -> name = $request->name;
+        $shop -> price = $request->price;
+        $shop -> sice = $request->sice;
+
+        if ($request->hasFile('picture')) {
+            $shop->picture = '/'.$request->picture->store('uploads/'.date('Ymd'));
+        }
+
+        if($shop -> save()){
+            return redirect('/shop')->with('success', '添加成功');
+        }else{
+            return back()->with('error','添加失败');
+        }
+
+        
+
     }
 
     /**
@@ -56,7 +78,10 @@ class ShopController extends Controller
      */
     public function edit($id)
     {
-        //
+        //获取用户的信息
+        $shops = Good::findOrFail($id);
+        //解析模板显示数据
+        return view('admin.shop.edit', ['shops'=>$shops]);
     }
 
     /**
@@ -68,7 +93,22 @@ class ShopController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $shops = Good::findOrFail($id);
+
+        //更新
+        $shops -> name = $request->name;
+        $shops -> price = $request->price;
+        $shops -> sice = $request->sice;
+
+        if ($request->hasFile('picture')) {
+            $shops->picture = '/'.$request->picture->store('uploads/'.date('Ymd'));
+        }
+
+        if($shops->save()){
+            return redirect('/shop')->with('success','更新成功');
+        }else{
+            return back()->with('error','更新失败');
+        }
     }
 
     /**
@@ -79,6 +119,12 @@ class ShopController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $shops = Good::findOrFail($id);
+
+        if($shops->delete()){
+            return back()->with('success','删除成功');
+        }else{
+            return back()->with('error','删除失败');
+        }
     }
 }

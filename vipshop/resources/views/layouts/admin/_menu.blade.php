@@ -12,7 +12,7 @@
                     <span>添加商品</span>
                     <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i>
                 </a>
-                <a href="/user">
+                <a href="/shop">
                     <i class="am-icon-angle-right"></i>
                     <span>商品列表</span>
                 </a>
