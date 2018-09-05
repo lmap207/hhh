@@ -50,7 +50,12 @@ Route::post('/admin/login', 'AdminController@dologin');
 //退出登录的路由
 Route::get('/admin/logout','AdminController@logout');
 
-  
+
+
+
+//前台路由
+Route::get('/{id}.html', 'ShopController@show');
+
 
 //在定
 

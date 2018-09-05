@@ -32,10 +32,17 @@
                             </select>
                         </div>
                     </div>
-
                 
-
-
+                    <div class="am-form-group">
+                        <label for="user-phone" class="am-u-sm-3 am-form-label">属性</label>
+                        <div class="am-u-sm-9">
+                            <select data-am-selected="{searchBox: 1}" name="pro_id" style="display: none;">
+                                @foreach($pros as $v)
+                                <option value="{{$v['id']}}">{{$v['pname']}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
 
                     <div class="am-form-group">
                         <label for="user-phone" class="am-u-sm-3 am-form-label">商品价格</label>

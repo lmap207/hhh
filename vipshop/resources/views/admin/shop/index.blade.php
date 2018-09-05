@@ -43,6 +43,7 @@
                             <th class="table-id">ID</th>
                             <th class="table-title">商品名</th>
                             <th class="table-title">分类名</th>
+                            <th class="table-title">属性名</th>
                             <th class="table-title">商品价格</th>
                             <th class="table-title">商品数量</th>
                             <th class="table-title">商品图片</th>
@@ -56,6 +57,7 @@
                             <td class="am-hide-sm-only">{{$v['id']}}</td>
                             <td class="am-hide-sm-only">{{$v['name']}}</td>
                             <td class="am-hide-sm-only">{{$v->cate->cate}}</td>
+                            <td class="am-hide-sm-only">{{$v->pro->pname}}</td>
                             <td class="am-hide-sm-only">{{$v['price']}} 元</td>
                             <td class="am-hide-sm-only">{{$v['sice']}}</td>
                             <td class="am-hide-sm-only"><img src="{{$v['picture']}}" width="50" alt=""></td>

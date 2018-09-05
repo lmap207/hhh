@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Cate;
 use App\Good;
+use App\Pro;
+use App\Vpro;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
@@ -18,6 +20,7 @@ class ShopController extends Controller
         $shops = Good::orderBy('id','desc')
         ->where('name','like', '%'.request()->keywords.'%')
         ->paginate(2);
+        
 
         return view('admin.shop.index', ['shops' => $shops]);
     }
@@ -30,8 +33,10 @@ class ShopController extends Controller
     public function create()
     {
         $cates = Cate::all();
+        $pros = Pro::all();
+        
   
-        return view('admin.shop.create', ['cates' => $cates]);
+        return view('admin.shop.create', ['cates' => $cates, 'pros' => $pros]);
     }
 
     /**
@@ -48,6 +53,7 @@ class ShopController extends Controller
         $shop -> price = $request->price;
         $shop -> sice = $request->sice;
         $shop -> cate_id = $request->cate_id;
+        $shop -> pro_id = $request->pro_id;
 
         if ($request->hasFile('picture')) {
             $shop->picture = '/'.$request->picture->store('uploads/'.date('Ymd'));
@@ -71,7 +77,7 @@ class ShopController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('home.shop.show');
     }
 
     /**
