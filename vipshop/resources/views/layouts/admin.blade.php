@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Amaze UI Admin index Examples</title>
+    <title>@yield('title')</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -128,7 +128,7 @@
                     <ul class="am-dropdown-content">
                         <li><a href="#"><span class="am-icon-bell-o"></span> 资料</a></li>
                         <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
-                        <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+                        <li><a href="/admin/logout"><span class="am-icon-power-off"></span> 退出</a></li>
                     </ul>
                 </li>
                 <li><a href="###" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
@@ -148,6 +148,7 @@
             @if(Session::has('success'))
             <div class=" am-u-sm-12" style="padding:0px;margin:0px;">
                 <div class="dashboard-stat green">
+
                     <div class="desc" style="text-align: center;line-height:95px;color:white">{{ Session::get('success') }}</div>
                 </div>
             </div>
@@ -155,6 +156,17 @@
             <div class=" am-u-sm-12" style="padding:0px;margin:0px;">
                 <div class="dashboard-stat green">
                     <div class="desc" style="text-align: center;line-height:95px;color:white">{{ Session::get('error') }}</div>
+
+                        <div class="desc" style="text-align: center;line-height:95px;color:white">{{Session::get('success')}} </div>
+                </div>
+            </div>
+            @endif
+
+            @if(Session::has('error'))
+            <div class=" am-u-sm-12" style="padding:0px;margin:0px;">
+                <div class="dashboard-stat red">
+                        <div class="desc" style="text-align: center;line-height:95px;color:white">{{Session::get('error')}} </div>
+
                 </div>
             </div>
             @endif
@@ -163,7 +175,14 @@
                 欢迎回到后台
                 @show
             </div>
-            @section('content') @show
+            
+
+            </div>
+            @section('content')
+
+            @show
+            
+
         </div>
     </div>
     <script src="/assets/js/jquery.min.js"></script>

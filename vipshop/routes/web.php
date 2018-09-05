@@ -27,14 +27,8 @@ Route::get('/admin/setting','AdminController@setting');
 //商品
 Route::resource('shop','ShopController');
 
-//评论
-Route::resource('pinglun','PinglunController');
-
-//收货地址
-Route::resource('address','AddressController');
-
-//订单详情表
-Route::resource('det','DetController');
+//用户
+Route::resource('user','Usercontroller');
 
 //属性值表
 Route::resource('vpro','VproController'); 
@@ -45,9 +39,6 @@ Route::resource('pro','ProController');
 //分类
 Route::resource('cate','CateController');
 
-// 购物车
-Route::resource('scar','ScarController');
-
 //友情链接
 Route::resource('link','LinkController');
 
@@ -56,7 +47,21 @@ Route::get('/admin/login', 'AdminController@login');
 
 //登陆操作
 Route::post('/admin/login', 'AdminController@dologin');
+//退出登录的路由
+Route::get('/admin/logout','AdminController@logout');
 
   
 
+//在定
 
+//评论
+Route::resource('pinglun','PinglunController');
+
+//收货地址
+Route::resource('address','AddressController');
+
+//订单详情表
+Route::resource('det','DetController');
+
+// 购物车
+Route::resource('scar','ScarController');
