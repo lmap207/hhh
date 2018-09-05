@@ -153,12 +153,12 @@
         </a>
         <ul class="tpl-left-nav-sub-menu" style="display: none;">
             <li>
-                <a href="form-amazeui.html">
+                <a href="/cate/create">
                     <i class="am-icon-angle-right"></i>
                     <span>添加分类</span>
                     <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i>
                 </a>
-                <a href="form-line.html">
+                <a href="/cate">
                     <i class="am-icon-angle-right"></i>
                     <span>分类列表</span>
                 </a>
@@ -195,12 +195,12 @@
         </a>
         <ul class="tpl-left-nav-sub-menu" style="display: none;">
             <li>
-                <a href="form-amazeui.html">
+                <a href="/link/create">
                     <i class="am-icon-angle-right"></i>
                     <span>添加友情链接</span>
                     <i class="tpl-left-nav-content-ico am-fr am-margin-right"></i>
                 </a>
-                <a href="form-line.html">
+                <a href="/link">
                     <i class="am-icon-angle-right"></i>
                     <span>友情链接列表</span>
                 </a>
