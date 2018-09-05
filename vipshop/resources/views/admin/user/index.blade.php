@@ -77,10 +77,10 @@
                                 <td class="am-hide-sm-only">{{$v['tel']}}</td>
                                 <td class="am-hide-sm-only">{{$v['email']}}</td>
                                
-                                <td>
-                                    <div class="am-btn-toolbar">
+                                <td >
+                                    <div class="am-btn-toolbar" >
                                   
-                                        <div class="am-btn-group am-btn-group-xs"> 
+                                        <div class="am-btn-group am-btn-group-xs" style="float:left"> 
                                     <!-- 编辑操作 -->
                                            <a href="/user/{{$v['id']}}/edit">
                                             <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span>编辑
@@ -88,11 +88,13 @@
                                             </button>
                                         </div>     
                                         <!-- 删除操作 -->
+                                        <div style="float:left">
                                         <form action="/user/{{$v['id']}}" method="post">
                                             <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
                                             {{csrf_field()}}
                                             {{method_field('DELETE')}}
                                         </form>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
