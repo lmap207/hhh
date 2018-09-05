@@ -149,9 +149,11 @@
             <div class="tpl-content-page-title">
                 @section('title')
                 欢迎回到后台
-                @show    
+                @show  
+                
             </div>
-            
+             @section('content')
+                @show 
         </div>
     </div>
     <script src="/assets/js/jquery.min.js"></script>
