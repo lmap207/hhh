@@ -47,6 +47,8 @@ Route::get('/admin/login', 'AdminController@login');
 
 //登陆操作
 Route::post('/admin/login', 'AdminController@dologin');
+//退出登录的路由
+Route::get('/admin/logout','AdminController@logout');
 
   
 

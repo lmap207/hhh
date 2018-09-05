@@ -128,7 +128,7 @@
                     <ul class="am-dropdown-content">
                         <li><a href="#"><span class="am-icon-bell-o"></span> 资料</a></li>
                         <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
-                        <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+                        <li><a href="/admin/logout"><span class="am-icon-power-off"></span> 退出</a></li>
                     </ul>
                 </li>
                 <li><a href="###" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
@@ -164,12 +164,7 @@
                 @section('title')
                 欢迎回到后台
                 @show  
-<<<<<<< HEAD
-            
-                  
-=======
-                            
->>>>>>> d6b42278f15cb4c1df1bbb64c724cb0e3a60beab
+
             </div>
             @section('content')
 
