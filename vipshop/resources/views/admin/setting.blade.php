@@ -3,7 +3,7 @@
 <div class="tpl-portlet-components">
     <div class="portlet-title">
         <div class="caption font-green bold">
-            <span class="am-icon-code"></span> 网站设置
+            <span>网站设置</span> 
         </div>
     </div>
     <div class="tpl-block">

@@ -2,7 +2,7 @@
 <div class="tpl-portlet-components" style="height:500px;">
     <div class="portlet-title">
         <div class="caption font-green bold">
-            <span class="am-icon-code"></span> 商品属性值
+            <span>商品属性值</span> 
         </div>
     </div>
     <div class="tpl-block ">
