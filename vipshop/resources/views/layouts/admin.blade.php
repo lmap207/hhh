@@ -164,11 +164,17 @@
                 @section('title')
                 欢迎回到后台
                 @show  
+<<<<<<< HEAD
             
                   
+=======
+                            
+>>>>>>> d6b42278f15cb4c1df1bbb64c724cb0e3a60beab
             </div>
-                @section('content')
-                @show
+            @section('content')
+
+            @show
+            
         </div>
     </div>
     <script src="/assets/js/jquery.min.js"></script>
