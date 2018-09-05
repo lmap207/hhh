@@ -22,6 +22,21 @@
                     </div>
 
                     <div class="am-form-group">
+                        <label for="user-phone" class="am-u-sm-3 am-form-label">分类</label>
+                        <div class="am-u-sm-9">
+                            <select data-am-selected="{searchBox: 1}" name="cate_id" style="display: none;">
+                                @foreach($cates as $v)
+                                <option value="{{$v['id']}}"
+                                    @if($v['id'] == $shops['cate_id']) 
+                                        selected 
+                                    @endif
+                                >{{$v['cate']}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="am-form-group">
                         <label for="user-phone" class="am-u-sm-3 am-form-label">商品价格</label>
                         <div class="am-u-sm-9">
                             <input type="tel" name="price" id="user-phone" placeholder="请输入商品价格" value="{{$shops->price}}">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cate;
 use App\Good;
 use Illuminate\Http\Request;
 
@@ -28,7 +29,9 @@ class ShopController extends Controller
      */
     public function create()
     {
-        return view('admin.shop.create');
+        $cates = Cate::all();
+  
+        return view('admin.shop.create', ['cates' => $cates]);
     }
 
     /**
@@ -44,6 +47,7 @@ class ShopController extends Controller
         $shop -> name = $request->name;
         $shop -> price = $request->price;
         $shop -> sice = $request->sice;
+        $shop -> cate_id = $request->cate_id;
 
         if ($request->hasFile('picture')) {
             $shop->picture = '/'.$request->picture->store('uploads/'.date('Ymd'));
@@ -80,8 +84,10 @@ class ShopController extends Controller
     {
         //获取用户的信息
         $shops = Good::findOrFail($id);
+        $cates = Cate::all();
+
         //解析模板显示数据
-        return view('admin.shop.edit', ['shops'=>$shops]);
+        return view('admin.shop.edit', ['shops' => $shops, 'cates' => $cates]);
     }
 
     /**
@@ -99,6 +105,7 @@ class ShopController extends Controller
         $shops -> name = $request->name;
         $shops -> price = $request->price;
         $shops -> sice = $request->sice;
+        $shops -> cate_id = $request->cate_id;
 
         if ($request->hasFile('picture')) {
             $shops->picture = '/'.$request->picture->store('uploads/'.date('Ymd'));

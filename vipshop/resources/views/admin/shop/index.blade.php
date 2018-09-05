@@ -42,6 +42,7 @@
                             </th>
                             <th class="table-id">ID</th>
                             <th class="table-title">商品名</th>
+                            <th class="table-title">分类名</th>
                             <th class="table-title">商品价格</th>
                             <th class="table-title">商品数量</th>
                             <th class="table-title">商品图片</th>
@@ -54,6 +55,7 @@
                             <td><input type="checkbox"></td>
                             <td class="am-hide-sm-only">{{$v['id']}}</td>
                             <td class="am-hide-sm-only">{{$v['name']}}</td>
+                            <td class="am-hide-sm-only">{{$v->cate->cate}}</td>
                             <td class="am-hide-sm-only">{{$v['price']}}</td>
                             <td class="am-hide-sm-only">{{$v['sice']}}</td>
                             <td class="am-hide-sm-only"><img src="{{$v['picture']}}" width="50" alt=""></td>
