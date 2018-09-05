@@ -164,9 +164,7 @@
                 @section('title')
                 欢迎回到后台
                 @show  
-                @section('content')
-                
-                @show  
+            
                   
             </div>
                 @section('content')
