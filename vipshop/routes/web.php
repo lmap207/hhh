@@ -26,7 +26,8 @@ Route::get('/admin/setting','AdminController@setting');
 
 //商品
 Route::resource('shop','ShopController');
-
+//用户
+Route::resource('user','Usercontroller');
 //评论
 Route::resource('pinglun','PinglunController');
 
