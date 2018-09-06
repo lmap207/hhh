@@ -45,6 +45,9 @@ Route::resource('link','LinkController');
 //商品发布作者
 Route::resource('author','AuthorController');
 
+//后台广告
+Route::resource('guanggao','GuanggaoController');
+
 //登陆页面
 Route::get('/admin/login', 'AdminController@login');
 
