@@ -6,7 +6,7 @@
 <div class="tpl-portlet-components">
     <div class="portlet-title">
         <div class="caption font-green bold">
-            <span>商品列表</span> 
+            <span>作者列表</span> 
         </div>
         
     </div>
@@ -15,7 +15,7 @@
             <div class="am-u-sm-12 am-u-md-6">
                 <div class="am-btn-toolbar">
                     <div class="am-btn-group am-btn-group-xs">
-                        <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span><a href="/shop/create"> 新增</a></button>
+                        <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span><a href="/author/create"> 新增</a></button>
                         <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
                     </div>
                 </div>
@@ -41,42 +41,26 @@
                                 <input type="checkbox" class="tpl-table-fz-check">
                             </th>
                             <th class="table-id">ID</th>
-                            <th class="table-title">商品名</th>
-                            <!--
-                            <th class="table-title">商品作者</th>
-                            <th class="table-title">商品标题</th>
-                            <th class="table-title">商品简介</th>
-                            -->
-                            <th class="table-title">分类名</th>
-                            <th class="table-title">属性名</th>
-                            <th class="table-title">商品价格</th>
-                            <th class="table-title">商品数量</th>
-                            <th class="table-title">商品图片</th>
+                            <th class="table-title">作者名</th>
+                            <th class="table-title">作者简介</th>
+                            <th class="table-title">作者头像</th>
                             <th class="table-set">操作</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($shops as $v)
+                        @foreach($authors as $v)
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="am-hide-sm-only">{{$v['id']}}</td>
-                            <td class="am-hide-sm-only">{{$v['name']}}</td>
-                            <!--
-                            <td class="am-hide-sm-only">{{$v['author']}}</td>
-                            <td class="am-hide-sm-only">{{$v['title']}}</td>
-                            <td class="am-hide-sm-only">{{$v['intro']}}</td>
-                            -->
-                            <td class="am-hide-sm-only">{{$v->cate->cate}}</td>
-                            <td class="am-hide-sm-only">{{$v->pro->pname}}</td>
-                            <td class="am-hide-sm-only">{{$v['price']}} 元</td>
-                            <td class="am-hide-sm-only">{{$v['sice']}}</td>
-                            <td class="am-hide-sm-only"><img src="{{$v['picture']}}" width="50" alt=""></td>
+                            <td class="am-hide-sm-only">{{$v['aname']}}</td>
+                            <td class="am-hide-sm-only">{{$v['aintro']}}</td>
+                            <td class="am-hide-sm-only"><img src="{{$v['apic']}}" width="50" alt=""></td>
 
                             <td>
                                 <div class="am-btn-toolbar">
                                     <div class="am-btn-group am-btn-group-xs">
-                                        <a href="/shop/{{$v['id']}}/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</a>
-                                        <form style="float:left" action="/shop/{{$v['id']}}" method="post">
+                                        <a href="/author/{{$v['id']}}/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</a>
+                                        <form style="float:left" action="/author/{{$v['id']}}" method="post">
                                             {{method_field('DELETE')}}
                                             {{csrf_field()}}
                                             <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
@@ -139,7 +123,7 @@
                 </style>
                 <div class="am-cf">
                     <div class="am-fr">
-                        {{ $shops->appends(request()->all())->links() }}
+                        
                     </div>
                 </div>
                 <hr>

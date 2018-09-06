@@ -18,4 +18,10 @@ class Good extends Model
     {
     	return $this->belongsTo('App\Pro');
     }
+
+    public function author()
+    {
+        return $this->belongsTo('App\Author');
+    }
+
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Author;
 use App\Cate;
 use App\Good;
 use App\Pro;
@@ -54,6 +55,9 @@ class ShopController extends Controller
         $shop -> sice = $request->sice;
         $shop -> cate_id = $request->cate_id;
         $shop -> pro_id = $request->pro_id;
+        $shop -> title = $request->title;
+        $shop -> intro = $request->intro;
+        $shop -> author = $request->author;
 
         if ($request->hasFile('picture')) {
             $shop->picture = '/'.$request->picture->store('uploads/'.date('Ymd'));
@@ -77,7 +81,12 @@ class ShopController extends Controller
      */
     public function show($id)
     {
-        return view('home.shop.show');
+        $shops = Good::findOrFail($id);
+        
+        $shops->liulan += 1;
+        $shops -> save();
+
+        return view('home.shop.show', ['shops' => $shops]);
     }
 
     /**

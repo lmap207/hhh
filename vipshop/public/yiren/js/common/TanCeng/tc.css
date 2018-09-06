@@ -1,0 +1,183 @@
+.vdialog-modal {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    display: none;
+}
+.vdialog-modal {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    opacity: .6;
+    background-color: #000;
+}
+.vdialog-modal {
+    filter: alpha(opacity=60);
+}
+.vdialog-modal1 {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    display: none;
+}
+.vdialog-modal1 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    opacity: .6;
+    background-color: #000;
+}
+.vdialog-modal1 {
+    filter: alpha(opacity=60);
+}
+#dvMsgBox {
+
+    position: fixed;
+    font-size: 12px;
+
+    overflow: hidden;
+    z-index: 999;
+    border-radius: 3px;
+    font-family: 微软雅黑;
+    width: 306px;
+    display: none;
+    top: 260px;
+    left: 50%;
+    z-index: 2000;
+    margin-left: -153px;
+}
+#dvMsgBox .top {
+    height: 40px;
+    background-color: #3d84c0;
+    padding-left: 16px;
+    float: left;
+    width: 100%;
+}
+#dvMsgBox .top .right {
+    height: 100%;
+    padding-right: 6px;
+    float: none;
+}
+#dvMsgBox .top .right .title {
+    height: 100%;
+    line-height: 40px;
+    color: #fff;
+    vertical-align: middle;
+    font-size: 14px;
+    overflow: hidden;
+}
+#dvMsgBox .constate {
+    background: #fff;
+    padding-left: 10px;
+}
+#dvMsgBox .constate .right {
+    float: none;
+}
+#dvMsgBox .constate .right .ct {
+    line-height: 60px;
+    vertical-align: middle;
+    width: 100%;
+    text-align: center;
+    color: #2b9bc5;
+    font-size: 14px;
+}
+#dvMsgBox .clear {
+    clear: both;
+}
+#dvMsgBox .bottom {
+    background: #fff;
+}
+#dvMsgBox .bottom .right {
+    height: 100%;
+}
+#dvMsgBtns {
+    text-align: center;
+    width: 100%;
+}
+#dvMsgBox .height {
+    height: 10px;
+    line-height: 10px;
+}
+#dvMsgBox1 {
+
+    position: fixed;
+    font-size: 12px;
+    width: 300px;
+    overflow: hidden;
+    z-index: 999;
+    border-radius: 3px;
+    font-family: 微软雅黑;
+    width: 300px;
+    display: none;
+    top: 260px;
+    left: 50%;
+    z-index: 2000;
+    margin-left: -150px;
+}
+#dvMsgBox1 .top {
+    height: 40px;
+    background-color: #3d84c0;
+    padding-left: 16px;
+    float: left;
+    width: 100%;
+}
+#dvMsgBox1 .top .right {
+    height: 100%;
+    padding-right: 6px;
+    float: none;
+}
+#dvMsgBox1 .top .right .title {
+    height: 100%;
+    line-height: 40px;
+    color: #fff;
+    vertical-align: middle;
+    font-size: 14px;
+    overflow: hidden;
+}
+#dvMsgBox1 .constate {
+    background: #fff;
+    padding-left: 10px;
+}
+#dvMsgBox1 .constate .right {
+    float: none;
+}
+#dvMsgBox1 .constate .right .ct {
+    line-height: 60px;
+    vertical-align: middle;
+    width: 100%;
+    text-align: center;
+    color: #2b9bc5;
+    font-size: 14px;
+}
+#dvMsgBox1 .clear {
+    clear: both;
+}
+#dvMsgBox1 .bottom {
+    background: #fff;
+}
+#dvMsgBox .bottom .right {
+    height: 100%;
+}
+#dvMsgBtns1 {
+    text-align: center;
+    width: 100%;
+}
+#dvMsgBox1 .height {
+    height: 10px;
+    line-height: 10px;
+}
+input.btn {
+    width: 56px;
+    border-radius: 3px;
+    font-family: 微软雅黑;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    height: 25px;
+    text-align: center;
+    background-color: #3d84c0;
+    text-align: center;
+    margin: 0px auto;
+}

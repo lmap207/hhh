@@ -21,7 +21,28 @@
                             <input type="text" name="name" id="user-name" placeholder="请输入商品名">
                         </div>
                     </div>
-                            
+                    
+                    <div class="am-form-group">
+                        <label for="user-name" class="am-u-sm-3 am-form-label">商品标题</label>
+                        <div class="am-u-sm-9">
+                            <input type="text" name="title" id="user-name" placeholder="请输入商品标题">
+                        </div>
+                    </div>
+
+                    <div class="am-form-group">
+                        <label for="user-name" class="am-u-sm-3 am-form-label">商品简介</label>
+                        <div class="am-u-sm-9">
+                            <input type="text" name="intro" id="user-name" placeholder="请输入商品简介">
+                        </div>
+                    </div>
+
+                    <div class="am-form-group">
+                        <label for="user-name" class="am-u-sm-3 am-form-label">商品作者</label>
+                        <div class="am-u-sm-9">
+                            <input type="text" name="author" id="user-name" placeholder="请输入商品作者">
+                        </div>
+                    </div>
+
                     <div class="am-form-group">
                         <label for="user-phone" class="am-u-sm-3 am-form-label">分类</label>
                         <div class="am-u-sm-9">

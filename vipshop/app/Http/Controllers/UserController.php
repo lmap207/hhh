@@ -97,12 +97,12 @@ class UserController extends Controller
     {
 
          $users = User::findOrFail($id);
-            //dd($users); die;
+         
          $users -> username = $request->username;
          $users -> qx = $request->qx;
          $users -> tel = $request->tel;
          $users -> email = $request->email;
-         
+         //dd($users); die;
         if($request->hasFile('pic')){
         //将上传的文件放在不同的文件里  方便管理 
         $users->pic = $request->pic->store('/'.'uploads/'.date('Ymd'));
