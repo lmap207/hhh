@@ -21,7 +21,7 @@ class ShopController extends Controller
     {
         $shops = Good::orderBy('id','desc')
         ->where('name','like', '%'.request()->keywords.'%')
-        ->paginate(2);
+        ->paginate(10);
         
 
         return view('admin.shop.index', ['shops' => $shops]);
@@ -36,9 +36,11 @@ class ShopController extends Controller
     {
         $cates = Cate::all();
         $pros = Pro::all();
+        $author =Author::all();
+     
         
   
-        return view('admin.shop.create', ['cates' => $cates, 'pros' => $pros]);
+        return view('admin.shop.create', ['cates' => $cates, 'pros' => $pros,'author'=>$author]);
     }
 
     /**
@@ -161,5 +163,28 @@ class ShopController extends Controller
         }else{
             return back()->with('error','删除失败');
         }
+    }
+
+    /**
+     * 商品列表
+     */
+    public function list(Request $request)
+    {
+        $cate = Cate::all();
+        //$shops = Good::orderBy('id','desc')->get();
+        // dd($shops);
+        
+        if(!empty($request->cate_id)){
+            $shops = Good::where('cate_id', $request->cate_id)->orderBy('id','desc')->get();
+        }
+
+        if(empty($shops)){
+            $shops = Good::orderBy('id','desc')->get();
+        }
+
+        /*if($cate['id'] == $shop['cate_id']){
+            $shops = Good::orderBy('id','desc')->get();
+        }*/
+        return view('home.shop.list', ['shops' => $shops, 'cate' => $cate]);
     }
 }
