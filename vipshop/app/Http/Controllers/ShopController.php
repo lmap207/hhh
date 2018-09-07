@@ -162,12 +162,20 @@ class ShopController extends Controller
     /**
      * 商品列表
      */
-    public function list()
+    public function list(Request $request)
     {
         $cate = Cate::all();
-        $shops = Good::orderBy('id','desc')->get();
+        //$shops = Good::orderBy('id','desc')->get();
         // dd($shops);
         
+        if(!empty($request->cate_id)){
+            $shops = Good::where('cate_id', $request->cate_id)->orderBy('id','desc')->get();
+        }
+
+        if(empty($shops)){
+            $shops = Good::orderBy('id','desc')->get();
+        }
+
         /*if($cate['id'] == $shop['cate_id']){
             $shops = Good::orderBy('id','desc')->get();
         }*/

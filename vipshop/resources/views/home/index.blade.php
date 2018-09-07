@@ -73,9 +73,9 @@
                         <!-- logo -->
                         <div class="nav">
                             <ul>
-                                <li class="current"><a href="http://yirenbbs.com" title="首页" class="app">首页</a></li>
-                                <li><a href="/haohuo/" title="好货">好货</a></li>
-                                <li><a href="/zhinan/" title="指南">指南</a></li>
+                                <li class="current"><a href="/" title="首页" class="app">首页</a></li>
+                                <li><a href="/shops" title="好货">好货</a></li>
+                                <li><a href="" title="指南">详情</a></li>
                             </ul>
                         </div>
                     </div>
@@ -88,29 +88,138 @@
             <script type="text/javascript" src="/shouye/template/js/Userlogin/login_tc.js"></script>
             <script type="text/javascript" src="/shouye/template/js/Userlogin/login.js"></script>
             <link type="text/css" rel="Stylesheet" href="/shouye/template/style/Goods/goods.css" />
-            <div id="page-wrap" class="mb0" style="margin-top:24px;">
-                <div id="waterfull" class="weiba-list-box waterfull" style="margin:0 auto;width:1198px;">
-                    <ul>
-                       @foreach ($goods as $v)
-               
-                            <div class="goosdetail">
-                                <h3><a  href="{{$v->picture}}" title=外星人手机蓝牙自拍补光灯 target="_blank" >外星人手机蓝牙自拍补光灯</a></h3>
-                                <p><a title='冰凌花' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041138714828.jpg" alt="冰凌花"></i>冰凌花</a><span class="likenum">4</span></p>
-                            </div>
-                        @endforeach 
-                       
-                    </ul>
-                </div>
-            </div>
+            
+            <style>
+        *{
+            margin:0px;
+            padding:0px;
+            list-style:none;
+        }
+        #slide{
+            width:450px;
+            height:300px;
+            border:solid 1px #ddd;
+            /*margin:100px auto;*/
+            position:relative;
+            overflow: hidden;
+        }
+        #images {
+            width:2250px;
+            position:absolute;
+        }
+        #images li{
+            width:450px;
+            height:300px;
+            left:0px;
+            top:0px;
+            float:left;
+        }
+
+        #dots{
+            width:200px;
+            height:20px;
+            position:absolute;
+            left:180px;
+            bottom:5px;
+        }
+
+        #dots li{
+            width: 10px;
+            height: 10px;
+            background:#aef;
+            float:left;
+            margin-right:5px;
+            border-radius:50%;
+        }
+
+        #dots .active{
+            background:black;
+        }
+    </style>
+        
+    <div id="slide" >
+        <ul id="images">
+            
+            <li><img src="/uploads/20180907/2CEMzWO3ghGQLrrjKeFcp8J60LQXbtQmevChCGAQ.jpeg" width="100%" alt=""></li>
+            <li><img src="/uploads/20180907/4pr7cscvvqhIS9o76lEA8rj7y4DyNiYYza506xiN.png" width="100%" alt=""></li>
+            <li><img src="/uploads/20180907/EqkQhZ2417OkEb9K8zJeuOyH7kUVIATpZ6zEuWG4.png" width="100%" alt=""></li>
+            <li><img src="/uploads/20180907/Q4xEFxFylwtpb3NzAYYYbGV2onlZKlFxfSwDJkE0.png" width="100%" alt=""></li>
+            
+        </ul>
+
+        <ul id="dots">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        /**
+            1. 页面布局
+            2. 定时器
+        */
+        var index = -1;
+        var timer = null;
+
+        $('#dots li').mouseover(function(){
+            //清除定时器
+            clearInterval(timer);
+            //修改图片的显示的内容
+            index  = $(this).index();
+            //显示当前索引的图片和点
+            show(index);
+        }).mouseout(function(){
+            // 启动定时器
+            autoRun();
+        });
+
+        //自动变化
+        function autoRun() {
+            timer = setInterval(function(){
+                index++;
+                //显示当前索引对应 图片和点
+                show(index);
+                //判断
+                if(index >= $('#images li').length-1) {
+                    index = -1;
+                }
+            }, 2000);
+        }
+        //显示当前索引对应图片和点
+        function show(index) {
+            //0    0
+            //1    -450
+            //2    -900
+            //3    -1350
+            //n    -n*450  
+
+            //点样式发生改变
+            $('#dots li').removeClass('active');
+            $('#dots li').eq(index).addClass('active');
+            //切换图片
+            // $('#images').css('left', '-'+index*450+'px');
+            $('#images').animate({left: '-'+index*450+'px'}, 1000)
+        }
+        autoRun();
+
+
+    </script>
+
+
+
+            
+            
             <!-- loading按钮自己通过样式调整 -->
             <div id="imloading" style="width:150px;height:30px;line-height:30px;font-size:16px;text-align:center;border-radius:3px;opacity:0.7;background:#000;margin:10px auto 30px;color:#fff;">I'm Loading.....</div>
             <div class="footer-wrap">
                 <div class="footer">
                     <h4>友情链接</h4>
                     <ul class="friendlink">
-                      @foreach($links as $v)
+                        @foreach($links as $v)
                         <li><a href=http:{{$v->url}}' title='猎头公司' target='_blank'>{{$v->lname}}</a></li>
-                       @endforeach
+                        @endforeach
                     </ul>
                 </div>
             </div>

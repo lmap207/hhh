@@ -7,7 +7,7 @@ class Good extends Model
     /**
      * 商品属于分类
      */
-    public function cate()
+    public function cates()
     {
         return $this->belongsTo('App\Cate');
     }
