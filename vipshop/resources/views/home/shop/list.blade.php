@@ -8,7 +8,7 @@
     <meta content="伊人私语，最知女人心的女性社区。建立全球女性精品时尚社区.女装,护肤,饰品,配饰,彩妆,数码,礼物,私服应有尽有,更好的满足女性时尚消费需求." name="description">
     <link href="" type="image/x-icon" rel="shortcut icon">
     <!--当当前页面用手机打开的时候，跳转到手机端-->
-    <script src="./js/common/Pc_Wap/uaredirect.js" type="text/javascript"></script>
+    <script src="/yiren/js/common/Pc_Wap/uaredirect.js" type="text/javascript"></script>
     <script type="text/javascript">
     var rurls = window.location.href;
 
@@ -27,14 +27,14 @@
     <!--END-->
     <meta name="360-site-verification" content="8e21b217b2a73391e53483d67f5e8aed" />
     <meta name="baidu-site-verification" content="ajLkmbbPbJ" />
-    <script src="./js/common/jQuery/1.8.3jquery.js"></script>
-    <script type="text/javascript" src="./js/common/validate.js"></script>
+    <script src="/yiren/js/common/jQuery/1.8.3jquery.js"></script>
+    <script type="text/javascript" src="/yiren/js/common/validate.js"></script>
     <!--公共项-->
-    <link type="text/css" rel="Stylesheet" href="./template/style/common/group.css" />
-    <link type="text/css" rel="Stylesheet" href="./template/style/common/weiba.css" />
+    <link type="text/css" rel="Stylesheet" href="/yiren/template/style/common/group.css" />
+    <link type="text/css" rel="Stylesheet" href="/yiren/template/style/common/weiba.css" />
     <!--公共项END-->
     <!--分页-->
-    <link type="text/css" rel="Stylesheet" href="./template/style/common/shar_resume.css" />
+    <link type="text/css" rel="Stylesheet" href="/yiren/template/style/common/shar_resume.css" />
     <!--分页END-->
     <script>
     var _hmt = _hmt || [];
@@ -68,7 +68,7 @@
                     <div class="head-bd">
                         <!-- logo -->
                         <div class="logo">
-                            <a href="http://yirenbbs.com" title="伊人私语"><img src="./template/images/goods/logo.png"  alt="伊人私语"></a>
+                            <a href="http://yirenbbs.com" title="伊人私语"><img src="/yiren/template/images/goods/logo.png"  alt="伊人私语"></a>
                         </div>
                         <!-- logo -->
                         <div class="nav">
@@ -83,12 +83,11 @@
             </div>
             <div style="height:64px;"></div>
             <!-- 登录弹层-->
-            <link type="text/css" rel="Stylesheet" href="./template/style/userlogin/login_tc.css" />
+            <link type="text/css" rel="Stylesheet" href="/yiren/template/style/userlogin/login_tc.css" />
             <!-- 登录弹层end-->
-            <script type="text/javascript" src="./template/js/Userlogin/login_tc.js"></script>
-            <script type="text/javascript" src="./template/js/Userlogin/login.js"></script>
-            <link type="text/css" rel="Stylesheet" href="./template/style/Goods/goods.css" />
-            <!-->
+            <script type="text/javascript" src="/yiren/template/js/Userlogin/login_tc.js"></script>
+            <script type="text/javascript" src="/yiren/template/js/Userlogin/login.js"></script>
+            <link type="text/css" rel="Stylesheet" href="/yiren/template/style/Goods/goods.css" />
             <style type="text/css">
             .floor-nav {
                 height: auto;
@@ -130,208 +129,18 @@
                         <div class="znfirstone">
                             <div class="listitle">
                                 <dl>
-                                    <dt><a href="/haohuo/270/" title="女装" target='_blank'>女装</a></dt>
+                                    <dt><a href="/haohuo/270/" title="衣服" target='_blank'>衣服</a></dt>
                                 </dl>
                             </div>
                             <ul>
-                                <li><a class="weiba-thumb" href="/haohuo/1877.html" title=原创丛林风牛仔半身裙，我已经被吸粉了 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822021628449410.jpg"  alt="原创丛林风牛仔半身裙，我已经被吸粉了" ></a>
+                                @foreach ($shops as $v) @if($v['cate_id'] == $v->cate['id'])
+                                <li><a class="weiba-thumb" href="/{{$v['id']}}.html" target="_blank"><img src="{{$v['picture']}}"  alt="{{$v['title']}}" ></a>
                                     <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1877.html" title=原创丛林风牛仔半身裙，我已经被吸粉了 target="_blank" >原创丛林风牛仔半身裙，我已经被吸粉了</a></h3>
-                                        <p><a title='梨落' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041255527878.jpg" alt="梨落"></i>梨落</a><span class="likenum" style='display:none;'>0</span></p>
+                                        <h3><a  href="/{{$v['id']}}.html" target="_blank" >{{$v['title']}}</a></h3>
+                                        <p><a href='javascript:void(0)'><i><img src="{{$v['apic']}}" alt="{{$v['author']}}"></i>{{$v['author']}}</a><span class="likenum" style='display:none;'>0</span></p>
                                     </div>
                                 </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1875.html" title=A字性感花苞半身裙子，好穿不贵 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822020716304534.jpg"  alt="A字性感花苞半身裙子，好穿不贵" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1875.html" title=A字性感花苞半身裙子，好穿不贵 target="_blank" >A字性感花苞半身裙子，好穿不贵</a></h3>
-                                        <p><a title='太滥情。' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041301366604.jpg" alt="太滥情。"></i>太滥情。</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1873.html" title=时尚黑白格少女半身裙，据说这格子每年火一次 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822013905282223.jpg"  alt="时尚黑白格少女半身裙，据说这格子每年火一次" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1873.html" title=时尚黑白格少女半身裙，据说这格子每年火一次 target="_blank" >时尚黑白格少女半身裙，据说这格子每年火一次</a></h3>
-                                        <p><a title='空口无凭。' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041226092738.jpg" alt="空口无凭。"></i>空口无凭。</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1836.html" title=淑女半身裙怎么能逃得掉你的法眼 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821120850029888.jpg"  alt="淑女半身裙怎么能逃得掉你的法眼" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1836.html" title=淑女半身裙怎么能逃得掉你的法眼 target="_blank" >淑女半身裙怎么能逃得掉你的法眼</a></h3>
-                                        <p><a title='扑朔迷离 *' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041206781668.jpg" alt="扑朔迷离 *"></i>扑朔迷离 *</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1765.html" title=高腰不规则半身裙子，透气性还不错 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/17/small_180817104525709551.jpg"  alt="高腰不规则半身裙子，透气性还不错" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1765.html" title=高腰不规则半身裙子，透气性还不错 target="_blank" >高腰不规则半身裙子，透气性还不错</a></h3>
-                                        <p><a title='自由' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041148571461.jpg" alt="自由"></i>自由</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1764.html" title=红色格纹半身裙子，网红少女都喜欢 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/17/small_180817104243995193.jpg"  alt="红色格纹半身裙子，网红少女都喜欢" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1764.html" title=红色格纹半身裙子，网红少女都喜欢 target="_blank" >红色格纹半身裙子，网红少女都喜欢</a></h3>
-                                        <p><a title='自命不凡。' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041223333712.jpg" alt="自命不凡。"></i>自命不凡。</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1763.html" title=千鸟格子半身裙怎么搭配，太简单不会我教你 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/17/small_180817103059835225.jpg"  alt="千鸟格子半身裙怎么搭配，太简单不会我教你" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1763.html" title=千鸟格子半身裙怎么搭配，太简单不会我教你 target="_blank" >千鸟格子半身裙怎么搭配，太简单不会我教你</a></h3>
-                                        <p><a title='TOP01' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041324233136.jpg" alt="TOP01"></i>TOP01</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1762.html" title=超短款少女半身裙，活力十足有点嗨 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/17/small_180817102717559375.jpg"  alt="超短款少女半身裙，活力十足有点嗨" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1762.html" title=超短款少女半身裙，活力十足有点嗨 target="_blank" >超短款少女半身裙，活力十足有点嗨</a></h3>
-                                        <p><a title='醉温柔' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041212711344.jpg" alt="醉温柔"></i>醉温柔</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1761.html" title=中长款高腰印花半身裙子，来自欧美 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/17/small_180817095534755208.jpg"  alt="中长款高腰印花半身裙子，来自欧美" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1761.html" title=中长款高腰印花半身裙子，来自欧美 target="_blank" >中长款高腰印花半身裙子，来自欧美</a></h3>
-                                        <p><a title='木兰' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041336509950.jpg" alt="木兰"></i>木兰</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1760.html" title=复古格子半身裙搭配我只服这一款 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/17/small_180817095108020331.jpg"  alt="复古格子半身裙搭配我只服这一款" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1760.html" title=复古格子半身裙搭配我只服这一款 target="_blank" >复古格子半身裙搭配我只服这一款</a></h3>
-                                        <p><a title='过火' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041255963249.jpg" alt="过火"></i>过火</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="znfirstone">
-                            <div class="listitle">
-                                <dl>
-                                    <dt><a href="/haohuo/271/" title="配件" target='_blank'>配件</a></dt>
-                                </dl>
-                            </div>
-                            <ul>
-                                <li><a class="weiba-thumb" href="/haohuo/1903.html" title=DOONA 飞天小女警合作款墨镜 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822045902084564.jpg"  alt="DOONA 飞天小女警合作款墨镜" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1903.html" title=DOONA 飞天小女警合作款墨镜 target="_blank" >DOONA 飞天小女警合作款墨镜</a></h3>
-                                        <p><a title='寂寞好了    人亦已歌' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041247287870.jpg" alt="寂寞好了    人亦已歌"></i>寂寞好了    人亦已歌</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1902.html" title=墨守 金属朋克挂链墨镜 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822045537759712.jpg"  alt="墨守 金属朋克挂链墨镜" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1902.html" title=墨守 金属朋克挂链墨镜 target="_blank" >墨守 金属朋克挂链墨镜</a></h3>
-                                        <p><a title='瞳孔' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041256108844.jpg" alt="瞳孔"></i>瞳孔</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1901.html" title=糖果色白框小脸太阳镜 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822045337394261.jpg"  alt="糖果色白框小脸太阳镜" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1901.html" title=糖果色白框小脸太阳镜 target="_blank" >糖果色白框小脸太阳镜</a></h3>
-                                        <p><a title='归去如风    森林散布' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041247416996.jpg" alt="归去如风    森林散布"></i>归去如风    森林散布</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1900.html" title=曼丝 不规则多边形偏光墨镜 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822045037990245.jpg"  alt="曼丝 不规则多边形偏光墨镜" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1900.html" title=曼丝 不规则多边形偏光墨镜 target="_blank" >曼丝 不规则多边形偏光墨镜</a></h3>
-                                        <p><a title='离歌' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041143087478.jpg" alt="离歌"></i>离歌</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1899.html" title=HIYOUTH 粉红色少女偏光太阳镜 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822044807743487.jpg"  alt="HIYOUTH 粉红色少女偏光太阳镜" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1899.html" title=HIYOUTH 粉红色少女偏光太阳镜 target="_blank" >HIYOUTH 粉红色少女偏光太阳镜</a></h3>
-                                        <p><a title='怜翠' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041456959343.jpg" alt="怜翠"></i>怜翠</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1898.html" title=LOHO 猫耳圆框墨镜 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822044604637558.jpg"  alt="LOHO 猫耳圆框墨镜" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1898.html" title=LOHO 猫耳圆框墨镜 target="_blank" >LOHO 猫耳圆框墨镜</a></h3>
-                                        <p><a title='似念似恋' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041248555175.jpg" alt="似念似恋"></i>似念似恋</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1897.html" title=彩膜渐变度假墨镜 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822044301781362.jpg"  alt="彩膜渐变度假墨镜" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1897.html" title=彩膜渐变度假墨镜 target="_blank" >彩膜渐变度假墨镜</a></h3>
-                                        <p><a title='神隐' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041255579907.jpg" alt="神隐"></i>神隐</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1896.html" title=法拉维迪石榴红花边太阳镜 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822043935161586.jpg"  alt="法拉维迪石榴红花边太阳镜" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1896.html" title=法拉维迪石榴红花边太阳镜 target="_blank" >法拉维迪石榴红花边太阳镜</a></h3>
-                                        <p><a title='大错特错。' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041227249669.jpg" alt="大错特错。"></i>大错特错。</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1895.html" title=音米夹片式多彩太阳镜 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822043458344465.jpg"  alt="音米夹片式多彩太阳镜" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1895.html" title=音米夹片式多彩太阳镜 target="_blank" >音米夹片式多彩太阳镜</a></h3>
-                                        <p><a title='小温柔' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041155024221.jpg" alt="小温柔"></i>小温柔</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1894.html" title=MIGO 超大框一体式太阳镜 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822042706800935.jpg"  alt="MIGO 超大框一体式太阳镜" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1894.html" title=MIGO 超大框一体式太阳镜 target="_blank" >MIGO 超大框一体式太阳镜</a></h3>
-                                        <p><a title='思密达' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041154231785.jpg" alt="思密达"></i>思密达</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="znfirstone">
-                            <div class="listitle">
-                                <dl>
-                                    <dt><a href="/haohuo/272/" title="饰品" target='_blank'>饰品</a></dt>
-                                </dl>
-                            </div>
-                            <ul>
-                                <li><a class="weiba-thumb" href="/haohuo/1893.html" title=可爱卡通猫项链 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822042602579724.jpg"  alt="可爱卡通猫项链" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1893.html" title=可爱卡通猫项链 target="_blank" >可爱卡通猫项链</a></h3>
-                                        <p><a title='未来' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041145140842.jpg" alt="未来"></i>未来</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1892.html" title=URaise&#183;精致镂空小鸟项链 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822042247369754.jpg"  alt="URaise&#183;精致镂空小鸟项链" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1892.html" title=URaise&#183;精致镂空小鸟项链 target="_blank" >URaise&#183;精致镂空小鸟项链</a></h3>
-                                        <p><a title='放肆' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041145127520.jpg" alt="放肆"></i>放肆</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1891.html" title=纯银飞机项链 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822040759238819.jpg"  alt="纯银飞机项链" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1891.html" title=纯银飞机项链 target="_blank" >纯银飞机项链</a></h3>
-                                        <p><a title='诠释' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041145107667.jpg" alt="诠释"></i>诠释</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1890.html" title=复古欧美雏菊项链 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822035908846925.jpg"  alt="复古欧美雏菊项链" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1890.html" title=复古欧美雏菊项链 target="_blank" >复古欧美雏菊项链</a></h3>
-                                        <p><a title='挣脱' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041145092344.jpg" alt="挣脱"></i>挣脱</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1886.html" title=手工花朵纯银项链 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822030437805196.jpg"  alt="手工花朵纯银项链" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1886.html" title=手工花朵纯银项链 target="_blank" >手工花朵纯银项链</a></h3>
-                                        <p><a title='痛楚' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041145080921.jpg" alt="痛楚"></i>痛楚</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1885.html" title=红宝石爱心项链 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822030011106474.jpg"  alt="红宝石爱心项链" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1885.html" title=红宝石爱心项链 target="_blank" >红宝石爱心项链</a></h3>
-                                        <p><a title='玩味' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041145071921.jpg" alt="玩味"></i>玩味</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1882.html" title=原创荆棘森系手链 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822025325136169.jpg"  alt="原创荆棘森系手链" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1882.html" title=原创荆棘森系手链 target="_blank" >原创荆棘森系手链</a></h3>
-                                        <p><a title='苦口' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041145060169.jpg" alt="苦口"></i>苦口</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1881.html" title=欧美风圆珠项链 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822024535951935.jpg"  alt="欧美风圆珠项链" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1881.html" title=欧美风圆珠项链 target="_blank" >欧美风圆珠项链</a></h3>
-                                        <p><a title='血腥' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041145050745.jpg" alt="血腥"></i>血腥</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1880.html" title=复古民族风项链 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822023920251919.jpg"  alt="复古民族风项链" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1880.html" title=复古民族风项链 target="_blank" >复古民族风项链</a></h3>
-                                        <p><a title='沧澜' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041145035892.jpg" alt="沧澜"></i>沧澜</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1879.html" title=清新轻灵の樱&#183;项链 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/22/small_180822022806431931.jpg"  alt="清新轻灵の樱&#183;项链" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1879.html" title=清新轻灵の樱&#183;项链 target="_blank" >清新轻灵の樱&#183;项链</a></h3>
-                                        <p><a title='陌路' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041145022570.jpg" alt="陌路"></i>陌路</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
+                                @endif @endforeach
                             </ul>
                         </div>
                         <div class="znfirstone">
@@ -475,75 +284,6 @@
                         <div class="znfirstone">
                             <div class="listitle">
                                 <dl>
-                                    <dt><a href="/haohuo/275/" title="私服" target='_blank'>私服</a></dt>
-                                </dl>
-                            </div>
-                            <ul>
-                                <li><a class="weiba-thumb" href="/haohuo/1835.html" title=弗利少女 少女感花边小胸内衣 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821115236675211.jpg"  alt="弗利少女 少女感花边小胸内衣" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1835.html" title=弗利少女 少女感花边小胸内衣 target="_blank" >弗利少女 少女感花边小胸内衣</a></h3>
-                                        <p><a title='消失殆尽' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041200948473.jpg" alt="消失殆尽"></i>消失殆尽</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1834.html" title=今夕何夕 深V蝴蝶结蕾丝套装 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821112659184568.jpg"  alt="今夕何夕 深V蝴蝶结蕾丝套装" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1834.html" title=今夕何夕 深V蝴蝶结蕾丝套装 target="_blank" >今夕何夕 深V蝴蝶结蕾丝套装</a></h3>
-                                        <p><a title='~泪珠。' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041211348942.jpg" alt="~泪珠。"></i>~泪珠。</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1833.html" title=今夕何夕 裸粉色心形镂空睡裙 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821112222397848.jpg"  alt="今夕何夕 裸粉色心形镂空睡裙" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1833.html" title=今夕何夕 裸粉色心形镂空睡裙 target="_blank" >今夕何夕 裸粉色心形镂空睡裙</a></h3>
-                                        <p><a title='空口言' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041214065469.jpg" alt="空口言"></i>空口言</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1832.html" title=好奇蜜斯 花朵蕾丝丝绒文胸 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821111019280714.jpg"  alt="好奇蜜斯 花朵蕾丝丝绒文胸" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1832.html" title=好奇蜜斯 花朵蕾丝丝绒文胸 target="_blank" >好奇蜜斯 花朵蕾丝丝绒文胸</a></h3>
-                                        <p><a title='爵迹' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041151073518.jpg" alt="爵迹"></i>爵迹</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1831.html" title=BOTHYOUNG 法式艾绿色温柔套装 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821110445784102.jpg"  alt="BOTHYOUNG 法式艾绿色温柔套装" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1831.html" title=BOTHYOUNG 法式艾绿色温柔套装 target="_blank" >BOTHYOUNG 法式艾绿色温柔套装</a></h3>
-                                        <p><a title='ソ别致美' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041216902269.jpg" alt="ソ别致美"></i>ソ别致美</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1830.html" title=Free People 薄纱蕾丝文胸 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821105842845960.jpg"  alt="Free People 薄纱蕾丝文胸" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1830.html" title=Free People 薄纱蕾丝文胸 target="_blank" >Free People 薄纱蕾丝文胸</a></h3>
-                                        <p><a title='动情就伤。' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041223669455.jpg" alt="动情就伤。"></i>动情就伤。</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1829.html" title=好奇小姐 梦幻刺绣仙女睡裙 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821105048246150.jpg"  alt="好奇小姐 梦幻刺绣仙女睡裙" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1829.html" title=好奇小姐 梦幻刺绣仙女睡裙 target="_blank" >好奇小姐 梦幻刺绣仙女睡裙</a></h3>
-                                        <p><a title='* 事与愿违' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041202626918.jpg" alt="* 事与愿违"></i>* 事与愿违</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1828.html" title=默色 马卡龙云朵内衣 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821104324457883.jpg"  alt="默色 马卡龙云朵内衣" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1828.html" title=默色 马卡龙云朵内衣 target="_blank" >默色 马卡龙云朵内衣</a></h3>
-                                        <p><a title='似有似无。' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041223726953.jpg" alt="似有似无。"></i>似有似无。</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1827.html" title=BOTHYOUNG 蕾丝挂脖bralette内衣 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821103046256112.jpg"  alt="BOTHYOUNG 蕾丝挂脖bralette内衣" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1827.html" title=BOTHYOUNG 蕾丝挂脖bralette内衣 target="_blank" >BOTHYOUNG 蕾丝挂脖bralette内衣</a></h3>
-                                        <p><a title='温柔虐%' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041219973868.jpg" alt="温柔虐%"></i>温柔虐%</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1826.html" title=BOTHYOUNG 性感蕾丝文胸 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821095951289637.jpg"  alt="BOTHYOUNG 性感蕾丝文胸" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1826.html" title=BOTHYOUNG 性感蕾丝文胸 target="_blank" >BOTHYOUNG 性感蕾丝文胸</a></h3>
-                                        <p><a title='冷冷清清 *' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041157892773.jpg" alt="冷冷清清 *"></i>冷冷清清 *</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="znfirstone">
-                            <div class="listitle">
-                                <dl>
                                     <dt><a href="/haohuo/276/" title="礼物" target='_blank'>礼物</a></dt>
                                 </dl>
                             </div>
@@ -610,150 +350,13 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="znfirstone">
-                            <div class="listitle">
-                                <dl>
-                                    <dt><a href="/haohuo/277/" title="数码" target='_blank'>数码</a></dt>
-                                </dl>
-                            </div>
-                            <ul>
-                                <li><a class="weiba-thumb" href="/haohuo/1853.html" title=AKG&#183;K450耳机头戴式耳机 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821052626177833.jpg"  alt="AKG&#183;K450耳机头戴式耳机" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1853.html" title=AKG&#183;K450耳机头戴式耳机 target="_blank" >AKG&#183;K450耳机头戴式耳机</a></h3>
-                                        <p><a title='*玩味' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041207810327.jpg" alt="*玩味"></i>*玩味</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1852.html" title=罗技&#183;K480多功能智能蓝牙键盘 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821052324265793.jpg"  alt="罗技&#183;K480多功能智能蓝牙键盘" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1852.html" title=罗技&#183;K480多功能智能蓝牙键盘 target="_blank" >罗技&#183;K480多功能智能蓝牙键盘</a></h3>
-                                        <p><a title='半夏锦年。' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041228206554.jpg" alt="半夏锦年。"></i>半夏锦年。</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1851.html" title=漫步者&#183;M100迷你户外蓝牙音箱 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821045341435284.jpg"  alt="漫步者&#183;M100迷你户外蓝牙音箱" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1851.html" title=漫步者&#183;M100迷你户外蓝牙音箱 target="_blank" >漫步者&#183;M100迷你户外蓝牙音箱</a></h3>
-                                        <p><a title='嗜爱如血 *' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041204047818.jpg" alt="嗜爱如血 *"></i>嗜爱如血 *</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1850.html" title=Bluelounge Kii&#183;钥匙扣数据线&#183;苹果专用 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821041715735721.jpg"  alt="Bluelounge Kii&#183;钥匙扣数据线&#183;苹果专用" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1850.html" title=Bluelounge Kii&#183;钥匙扣数据线&#183;苹果专用 target="_blank" >Bluelounge Kii&#183;钥匙扣数据线&#183;苹果专用</a></h3>
-                                        <p><a title='倚门回首 **°' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041237666414.jpg" alt="倚门回首 **°"></i>倚门回首 **°</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1847.html" title=钢铁侠led灯DIY礼物 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821035746068219.jpg"  alt="钢铁侠led灯DIY礼物" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1847.html" title=钢铁侠led灯DIY礼物 target="_blank" >钢铁侠led灯DIY礼物</a></h3>
-                                        <p><a title='OO' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041259934704.jpg" alt="OO"></i>OO</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1844.html" title=MEMOBIRD 咕咕打印机 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821030528001511.jpg"  alt="MEMOBIRD 咕咕打印机" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1844.html" title=MEMOBIRD 咕咕打印机 target="_blank" >MEMOBIRD 咕咕打印机</a></h3>
-                                        <p><a title='# 城南旧事' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041207560681.jpg" alt="# 城南旧事"></i># 城南旧事</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1776.html" title=哆啦A梦12生肖充电宝 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/17/small_180817031204345945.jpg"  alt="哆啦A梦12生肖充电宝" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1776.html" title=哆啦A梦12生肖充电宝 target="_blank" >哆啦A梦12生肖充电宝</a></h3>
-                                        <p><a title='小插曲' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041154198139.jpg" alt="小插曲"></i>小插曲</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1775.html" title=亿觅&#183;萌猫充电宝【移动电源可爱担当】 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/17/small_180817030854362661.jpg"  alt="亿觅&#183;萌猫充电宝【移动电源可爱担当】" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1775.html" title=亿觅&#183;萌猫充电宝【移动电源可爱担当】 target="_blank" >亿觅&#183;萌猫充电宝【移动电源可爱担当】</a></h3>
-                                        <p><a title='ヽ |东京巴士' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041207051167.jpg" alt="ヽ |东京巴士"></i>ヽ |东京巴士</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1774.html" title=MUID&#183;二代云朵电子智能闹钟 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/17/small_180817024654157200.jpg"  alt="MUID&#183;二代云朵电子智能闹钟" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1774.html" title=MUID&#183;二代云朵电子智能闹钟 target="_blank" >MUID&#183;二代云朵电子智能闹钟</a></h3>
-                                        <p><a title='ヽ |夏雨惊荷' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041207090665.jpg" alt="ヽ |夏雨惊荷"></i>ヽ |夏雨惊荷</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1773.html" title=CHEERO&#183;纸箱人阿楞数据充电线 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/17/small_180817024226624458.jpg"  alt="CHEERO&#183;纸箱人阿楞数据充电线" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1773.html" title=CHEERO&#183;纸箱人阿楞数据充电线 target="_blank" >CHEERO&#183;纸箱人阿楞数据充电线</a></h3>
-                                        <p><a title='甜人蜜语' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041206936217.jpg" alt="甜人蜜语"></i>甜人蜜语</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="znfirstone">
-                            <div class="listitle">
-                                <dl>
-                                    <dt><a href="/haohuo/278/" title="家居" target='_blank'>家居</a></dt>
-                                </dl>
-                            </div>
-                            <ul>
-                                <li><a class="weiba-thumb" href="/haohuo/1849.html" title=UpMug&#183;陶瓷旋律杯 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821040827869528.jpg"  alt="UpMug&#183;陶瓷旋律杯" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1849.html" title=UpMug&#183;陶瓷旋律杯 target="_blank" >UpMug&#183;陶瓷旋律杯</a></h3>
-                                        <p><a title='乱世佳人' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041206975392.jpg" alt="乱世佳人"></i>乱世佳人</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1848.html" title=酷玩音乐台灯 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/21/small_180821040516832177.jpg"  alt="酷玩音乐台灯" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1848.html" title=酷玩音乐台灯 target="_blank" >酷玩音乐台灯</a></h3>
-                                        <p><a title='陈旧' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041150528298.jpg" alt="陈旧"></i>陈旧</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1585.html" title=海尔 家用空气净化器 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/16/small_180816035906063225.jpg"  alt="海尔 家用空气净化器" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1585.html" title=海尔 家用空气净化器 target="_blank" >海尔 家用空气净化器</a></h3>
-                                        <p><a title='自由' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041148571461.jpg" alt="自由"></i>自由</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1395.html" title=猫咪加湿器 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/08/small_180808050654459777.jpg"  alt="猫咪加湿器" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1395.html" title=猫咪加湿器 target="_blank" >猫咪加湿器</a></h3>
-                                        <p><a title='最初' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041142178770.jpg" alt="最初"></i>最初</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1423.html" title=智能数字闹钟 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/09/small_180809111640230967.jpg"  alt="智能数字闹钟" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1423.html" title=智能数字闹钟 target="_blank" >智能数字闹钟</a></h3>
-                                        <p><a title='余光' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041142202945.jpg" alt="余光"></i>余光</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1694.html" title=北欧现代INS金色菠萝创意摆件 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/15/small_180815034156345829.jpg"  alt="北欧现代INS金色菠萝创意摆件" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1694.html" title=北欧现代INS金色菠萝创意摆件 target="_blank" >北欧现代INS金色菠萝创意摆件</a></h3>
-                                        <p><a title='揪心' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Think_UserHead/2016/07/12/small_36.png" alt="揪心"></i>揪心</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/1691.html" title=北欧装饰创意INS鹿角钟表 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/08/15/small_180815033522568764.jpg"  alt="北欧装饰创意INS鹿角钟表" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/1691.html" title=北欧装饰创意INS鹿角钟表 target="_blank" >北欧装饰创意INS鹿角钟表</a></h3>
-                                        <p><a title='燃烧' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Think_UserHead/2016/07/12/small_35.png" alt="燃烧"></i>燃烧</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/10.html" title=多功能彩色收纳板墙贴装饰壁饰 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/07/16/small_180716102406931631.jpg"  alt="多功能彩色收纳板墙贴装饰壁饰" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/10.html" title=多功能彩色收纳板墙贴装饰壁饰 target="_blank" >多功能彩色收纳板墙贴装饰壁饰</a></h3>
-                                        <p><a title='lcc' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041136319869.jpg" alt="lcc"></i>lcc</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/38.html" title=仿真鹿头动物头室内装饰 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/07/16/small_180716022824561942.jpg"  alt="仿真鹿头动物头室内装饰" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/38.html" title=仿真鹿头动物头室内装饰 target="_blank" >仿真鹿头动物头室内装饰</a></h3>
-                                        <p><a title='jc团队萌小依' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/HongRen_UserHead/2016/01/15/small_160115105502657637.jpeg" alt="jc团队萌小依"></i>jc团队萌小依</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                                <li><a class="weiba-thumb" href="/haohuo/40.html" title=火烈鸟装饰摆件创意家居时尚小饰品 target="_blank"><img src="http://image01.xzhichang.com/goods_article/2018/07/16/small_180716023629374568.jpg"  alt="火烈鸟装饰摆件创意家居时尚小饰品" ></a>
-                                    <div class="goosdetail">
-                                        <h3><a  href="/haohuo/40.html" title=火烈鸟装饰摆件创意家居时尚小饰品 target="_blank" >火烈鸟装饰摆件创意家居时尚小饰品</a></h3>
-                                        <p><a title='JC9幻哥哥' href='javascript:void(0)'><i><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/small_180808041139326970.jpg" alt="JC9幻哥哥"></i>JC9幻哥哥</a><span class="likenum" style='display:none;'>0</span></p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                     <div id="pagelistsss">
                     </div>
                     <!--楼层效果-->
                     <nav class="floor-nav" style="left: 11.5px;">
-                        <span class="scroll-nav active">女装</span><span class="scroll-nav">配件</span><span class="scroll-nav">饰品</span><span class="scroll-nav">护肤</span><span class="scroll-nav">彩妆</span><span class="scroll-nav">私服</span><span class="scroll-nav">礼物</span><span class="scroll-nav">数码</span><span class="scroll-nav">家居</span>
+                        @foreach ($cate as $v)
+                        <span class="scroll-nav active">{{$v['cate']}}</span> @endforeach
                     </nav>
                 </div>
             </div>
@@ -773,7 +376,7 @@
                         <dl class="menu">
                             <dt>
                                 <a href="javascript:void(0)" title="更多" rel="nofollow">
-                                        <img src="./template/images/footerlogo.png" alt="伊人私语">
+                                        <img src="/yiren/template/images/footerlogo.png" alt="伊人私语">
                                     </a>
                             </dt>
                             <dd>
@@ -813,17 +416,17 @@
 </html>
 <input type="hidden" id="hidtype" value="" />
 <!--[if lt IE 9]>
-        <script src="./js/css3-mediaqueries.js"></script>
+        <script src="/yiren/js/css3-mediaqueries.js"></script>
     <![endif]-->
-<script type="text/javascript" src="./template/js/index/jQueryColor.js"></script>
+<script type="text/javascript" src="/yiren/template/js/index/jQueryColor.js"></script>
 <!--这个插件是瀑布流主插件函数必须-->
-<script type="text/javascript" src="./template/js/index/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="/yiren/template/js/index/jquery.masonry.min.js"></script>
 <!--这个插件只是为了扩展jquery的animate函数动态效果可有可无-->
-<script type="text/javascript" src="./template/js/index/jQeasing.js"></script>
-<script type="text/javascript" src="./template/js/index/index.js"></script>
+<script type="text/javascript" src="/yiren/template/js/index/jQeasing.js"></script>
+<script type="text/javascript" src="/yiren/template/js/index/index.js"></script>
 <!-- <input type="hidden" id="hidstype" value="" /> -->
-<script type="text/javascript" src="./template/js/goods/article_list.js"></script>
-<script type="text/javascript" src="./template/js/goods/jquery.scroll.floor.js"></script>
+<script type="text/javascript" src="/yiren/template/js/goods/article_list.js"></script>
+<script type="text/javascript" src="/yiren/template/js/goods/jquery.scroll.floor.js"></script>
 <script type="text/javascript">
 scrollFloor({
     floorClass: '.znfirstone', //楼层盒子class;默认为'.scroll-floor'

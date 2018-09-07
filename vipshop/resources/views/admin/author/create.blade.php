@@ -31,7 +31,7 @@
                         <div class="am-u-sm-9">
                             <div class="am-form-group am-form-file">
                                 <button type="button" class="am-btn am-btn-danger am-btn-sm">
-                                <i class="am-icon-cloud-upload"></i> 添加封面图片</button>
+                                <i class="am-icon-cloud-upload"></i> 添加作者头像</button>
                                 <input id="doc-form-file" type="file" name="apic" multiple="">
                             </div>
                         </div>

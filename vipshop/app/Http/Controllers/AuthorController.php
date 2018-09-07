@@ -61,7 +61,7 @@ class AuthorController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
