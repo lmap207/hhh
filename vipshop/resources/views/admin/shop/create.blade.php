@@ -36,19 +36,25 @@
                         </div>
                     </div>
 
-                    <div class="am-form-group">
-                        <label for="user-name" class="am-u-sm-3 am-form-label">商品作者</label>
-                        <div class="am-u-sm-9">
-                            <input type="text" name="author" id="user-name" placeholder="请输入商品作者">
-                        </div>
-                    </div>
-
-                    <div class="am-form-group">
+                  <!-- 作者 -->
+                       <div class="am-form-group">
                         <label for="user-phone" class="am-u-sm-3 am-form-label">分类</label>
                         <div class="am-u-sm-9">
                             <select data-am-selected="{searchBox: 1}" name="cate_id" style="display: none;">
                                 @foreach($cates as $v)
-                                <option value="{{$v['id']}}">{{$v['cate']}}</option>
+                                <option value="{{$v['id']}}">{{$v->cate}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                  
+                    <!-- 分类 -->
+                    <div class="am-form-group">
+                        <label for="user-phone" class="am-u-sm-3 am-form-label">作者</label>
+                        <div class="am-u-sm-9">
+                            <select data-am-selected="{searchBox: 1}" name="cate_id" style="display: none;">
+                                @foreach($author as $v)
+                                <option value="{{$v['id']}}">{{$v['aname']}}</option>
                                 @endforeach
                             </select>
                         </div>

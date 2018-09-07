@@ -12,9 +12,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // 后台路由
 
@@ -58,11 +58,6 @@ Route::get('/admin/logout','AdminController@logout');
 
 
 
-
-//前台路由
-Route::get('/{id}.html', 'ShopController@show');
-
-
 //在定
 
 //评论
@@ -76,3 +71,8 @@ Route::resource('det','DetController');
 
 // 购物车
 Route::resource('scar','ScarController');
+
+//
+Route::get('/{id}.html', 'ShopController@show');
+//前台首页
+Route::get('/','HomeController@index');

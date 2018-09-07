@@ -35,9 +35,11 @@ class ShopController extends Controller
     {
         $cates = Cate::all();
         $pros = Pro::all();
+        $author =Author::all();
+     
         
   
-        return view('admin.shop.create', ['cates' => $cates, 'pros' => $pros]);
+        return view('admin.shop.create', ['cates' => $cates, 'pros' => $pros,'author'=>$author]);
     }
 
     /**

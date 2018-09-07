@@ -66,6 +66,7 @@
                             <td class="am-hide-sm-only">{{$v['title']}}</td>
                             <td class="am-hide-sm-only">{{$v['intro']}}</td>
                             -->
+                            
                             <td class="am-hide-sm-only">{{$v->cate->cate}}</td>
                             <td class="am-hide-sm-only">{{$v->pro->pname}}</td>
                             <td class="am-hide-sm-only">{{$v['price']}} 元</td>
