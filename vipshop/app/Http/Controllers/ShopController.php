@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Author;
 use App\Cate;
 use App\Good;
+use App\Link;
 use App\Pro;
 use App\Vpro;
 use Illuminate\Http\Request;
@@ -89,7 +90,12 @@ class ShopController extends Controller
         $shops->liulan += 1;
         $shops -> save();
 
-        return view('home.shop.show', ['shops' => $shops]);
+        $links = Link::all();
+
+        $tuijian = Good::orderBy('liulan','desc')->take(5)->get();
+
+
+        return view('home.shop.show', ['shops' => $shops,'links'=>$links,'tuijian'=>$tuijian]);
     }
 
     /**
