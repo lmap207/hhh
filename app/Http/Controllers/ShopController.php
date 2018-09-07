@@ -58,11 +58,14 @@ class ShopController extends Controller
         $shop -> title = $request->title;
         $shop -> intro = $request->intro;
         $shop -> author = $request->author;
+        $shop -> aintro = $request->aintro;
 
         if ($request->hasFile('picture')) {
             $shop->picture = '/'.$request->picture->store('uploads/'.date('Ymd'));
         }
-
+        if ($request->hasFile('apic')) {
+            $shop->apic = '/'.$request->apic->store('uploads/'.date('Ymd'));
+        }
         if($shop -> save()){
             return redirect('/shop')->with('success', '添加成功');
         }else{
@@ -121,9 +124,13 @@ class ShopController extends Controller
         $shops -> price = $request->price;
         $shops -> sice = $request->sice;
         $shops -> cate_id = $request->cate_id;
+        $shops -> aintro = $request->aintro;
 
         if ($request->hasFile('picture')) {
             $shops->picture = '/'.$request->picture->store('uploads/'.date('Ymd'));
+        }
+         if ($request->hasFile('apic')) {
+            $shops->apic = '/'.$request->apic->store('uploads/'.date('Ymd'));
         }
 
         if($shops->save()){

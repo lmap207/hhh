@@ -1,3 +1,4 @@
+
 <?php
 
 namespace App\Http\Controllers;
@@ -60,7 +61,8 @@ class AdminController extends Controller
     public function login(){
           return view('admin.login');
     }
-    public function dologin(Request $request){
+    public function dologin(Request $request)
+    {
     	     $user = User::where('username',$request->username)->first();
              if(!$user){
                   return back()->with('error','登录失败');

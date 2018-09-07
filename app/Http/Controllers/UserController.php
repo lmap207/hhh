@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-    $users = User::orderBy('id','desc')->where('username','like','%'.request()->keywords.'%')->paginate(1);
+    $users = User::orderBy('id','asc')->where('username','like','%'.request()->keywords.'%')->paginate(5);
 
        //解析模板
        return view('admin.user.index',['users'=>$users]);
@@ -131,4 +131,6 @@ class UserController extends Controller
             return back()->with('error','删除失败');
            }
     }
+
 }
+

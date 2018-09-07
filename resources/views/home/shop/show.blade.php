@@ -129,12 +129,12 @@
                                         <div id="col3" class="st-index-right">
                                             <div class="c-right-wrap">
                                                 <div class="writer">
-                                                    <h4>分享作者</h4>
+                                                    <h4>发布作者</h4>
                                                     <dl class="writerinfo">
-                                                        <dt><a title='梨落' href='javascript:void(0)'><img src="http://image01.xzhichang.com/Yirensiyu_UserHead/2018/08/08/middle_180808041255527878.jpg" alt="梨落"></a></dt>
+                                                        <dt><a title='{{$shops->author}}' href='javascript:void(0)'><img src="{{$shops->apic}}" alt="{{$shops->author}}"></a></dt>
                                                         <dd>
-                                                            <h5><a  title='梨落'  href='javascript:void(0)' ></a></h5>
-                                                            <p>为了以后的家庭，你不奋斗...</p>
+                                                            <h5><a  title='{{$shops->author}}'  href='javascript:void(0)' ></a></h5>
+                                                            <p>{{$shops->aintro}}...</p>
                                                         </dd>
                                                     </dl>
                                                     <ul class=" writerhonor" style='display:none;'>
@@ -151,26 +151,6 @@
                                                         <li>
                                                             <div class="aritleLeft"><a href='/haohuo/228.html' title='超萌时尚卡通小象usb鼠标' target='_blank'><img src="http://image01.xzhichang.com/recomend/goods/2018/07/20/180720055305618707.jpg" alt="超萌时尚卡通小象usb鼠标"></a></div>
                                                             <div class="aritlerigt"><a href='/haohuo/228.html' title='超萌时尚卡通小象usb鼠标' target='_blank'>超萌时尚卡通小象usb鼠标</a></div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="aritleLeft"><a href='/haohuo/230.html' title='妞娃家用射频激光美容仪器' target='_blank'><img src="http://image01.xzhichang.com/recomend/goods/2018/07/20/180720055152824711.jpg" alt="妞娃家用射频激光美容仪器"></a></div>
-                                                            <div class="aritlerigt"><a href='/haohuo/230.html' title='妞娃家用射频激光美容仪器' target='_blank'>妞娃家用射频激光美容仪器</a></div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="aritleLeft"><a href='/haohuo/360.html' title='漫步者&#183;H750头戴式耳机' target='_blank'><img src="http://image01.xzhichang.com/recomend/goods/2018/07/20/180720055005599783.jpg" alt="漫步者&#183;H750头戴式耳机"></a></div>
-                                                            <div class="aritlerigt"><a href='/haohuo/360.html' title='漫步者&#183;H750头戴式耳机' target='_blank'>漫步者&#183;H750头戴式耳机</a></div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="aritleLeft"><a href='/haohuo/417.html' title='创意粉色少女火烈鸟雕塑摆件装饰品' target='_blank'><img src="http://image01.xzhichang.com/recomend/goods/2018/07/20/180720054556821341.jpg" alt="创意粉色少女火烈鸟雕塑摆件装饰品"></a></div>
-                                                            <div class="aritlerigt"><a href='/haohuo/417.html' title='创意粉色少女火烈鸟雕塑摆件装饰品' target='_blank'>创意粉色少女火烈鸟雕塑摆件装饰品</a></div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="aritleLeft"><a href='/haohuo/426.html' title='田园小清新陶瓷彩虹创意花瓶' target='_blank'><img src="http://image01.xzhichang.com/recomend/goods/2018/07/20/180720054402974352.jpg" alt="田园小清新陶瓷彩虹创意花瓶"></a></div>
-                                                            <div class="aritlerigt"><a href='/haohuo/426.html' title='田园小清新陶瓷彩虹创意花瓶' target='_blank'>田园小清新陶瓷彩虹创意花瓶</a></div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="aritleLeft"><a href='/haohuo/271.html' title='意大利ALL-JOINT张柏芝同款兔子不锈钢保温杯' target='_blank'><img src="http://image01.xzhichang.com/recomend/goods/2018/07/20/180720054050413115.jpg" alt="意大利ALL-JOINT张柏芝同款兔子不锈钢保温杯"></a></div>
-                                                            <div class="aritlerigt"><a href='/haohuo/271.html' title='意大利ALL-JOINT张柏芝同款兔子不锈钢保温杯' target='_blank'>意大利ALL-JOINT张柏芝同款兔子不锈钢保...</a></div>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -195,7 +175,7 @@
                                                         <div class="prev1" id="prev1"></div>
                                                         <div class="next1" id="next1"></div>
                                                         <ul>
-                                                            <li><a href="javascript:;" title="原创丛林风牛仔半身裙，我已经被吸粉了"><img alt="原创丛林风牛仔半身裙，我已经被吸粉了" src="{{$shops->picture}}" width="500"/></a></li>
+                                                            <li><a href="javascript:;" title="原创丛林风牛仔半身裙，我已经被吸粉了"><img alt="原创丛林风牛仔半身裙，我已经被吸粉了" src="{{$shops->picture}}" width="500" height="700"/></a></li>
                                                         </ul>
                                                     </div>
                                                 </div>

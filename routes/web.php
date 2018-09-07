@@ -1,4 +1,5 @@
 
+
 <?php
 
 /*
@@ -53,6 +54,7 @@ Route::get('/admin/login', 'AdminController@login');
 
 //登陆操作
 Route::post('/admin/login', 'AdminController@dologin');
+
 //退出登录的路由
 Route::get('/admin/logout','AdminController@logout');
 
@@ -76,3 +78,14 @@ Route::resource('det','DetController');
 
 // 购物车
 Route::resource('scar','ScarController');
+
+// 注册
+Route::get('/home/zhuce','ZhuceController@zhuce');
+// 执行注册
+Route::post('/home/zhuce','ZhuceController@store');
+Route::get('/captcha/{tmp}','ZhuceController@captcha');
+
+//登录
+Route::get('/home/login','ZhuceController@login');
+//登录操作
+Route::post('/home/dologin','ZhuceController@dologin');

@@ -52,6 +52,8 @@
                             <th class="table-title">商品价格</th>
                             <th class="table-title">商品数量</th>
                             <th class="table-title">商品图片</th>
+                            <th class="table-title">作者头像</th>
+                            <th class="table-title">作者简介</th>
                             <th class="table-set">操作</th>
                         </tr>
                     </thead>
@@ -71,7 +73,8 @@
                             <td class="am-hide-sm-only">{{$v['price']}} 元</td>
                             <td class="am-hide-sm-only">{{$v['sice']}}</td>
                             <td class="am-hide-sm-only"><img src="{{$v['picture']}}" width="50" alt=""></td>
-
+                            <td class="am-hide-sm-only"><img src="{{$v['apic']}}" width="50" alt=""></td>
+                             <td class="am-hide-sm-only">{{$v['aintro']}}</td>
                             <td>
                                 <div class="am-btn-toolbar">
                                     <div class="am-btn-group am-btn-group-xs">

@@ -58,8 +58,27 @@
                                     <img src="{{$shops->picture}}" width="50" alt="">
                                 </div>
                                 <button type="button" class="am-btn am-btn-danger am-btn-sm">
-                                <i class="am-icon-cloud-upload"></i> 添加封面图片</button>
+                                <i class="am-icon-cloud-upload"></i> 修改商品图片</button>
                                 <input id="doc-form-file" type="file" name="picture" multiple="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="am-form-group">
+                        <label for="user-QQ" class="am-u-sm-3 am-form-label">作者简介</label>
+                        <div class="am-u-sm-9">
+                            <input type="text" name="aintro" pattern="[0-9]*" id="user-QQ" placeholder="请输入作者简介" value="{{$shops->aintro}}">
+                        </div>
+                    </div>
+                    <div class="am-form-group">
+                        <label for="user-weibo" class="am-u-sm-3 am-form-label">作者头像</label>
+                        <div class="am-u-sm-9">
+                            <div class="am-form-group am-form-file">
+                                <div class="tpl-form-file-img">
+                                    <img src="{{$shops->apic}}" width="50" alt="">
+                                </div>
+                                <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                                <i class="am-icon-cloud-upload"></i> 修改作者头像</button>
+                                <input id="doc-form-file" type="file" name="apic" multiple="">
                             </div>
                         </div>
                     </div>
