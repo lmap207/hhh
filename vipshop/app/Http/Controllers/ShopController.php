@@ -149,4 +149,14 @@ class ShopController extends Controller
             return back()->with('error','删除失败');
         }
     }
+
+    /**
+     * 商品列表
+     */
+    public function list()
+    {
+        
+        
+        return view('home.shop.list');
+    }
 }
