@@ -56,8 +56,23 @@
 
     text-indent: 38px;
     border-radius: 3px;
-    background: url("/template/images/goods/pubgoods.png") no-repeat 19px center #fafafa;
+    background: url(/template/images/goods/pubgoods.png) no-repeat 19px center #fafafa;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*goods导航end*/
 
@@ -87,7 +102,7 @@
     width: 100%;
 }
 .weiba-list-box li div {
-    background: url("/template/images/goods/listbg.png") no-repeat;
+    background: url(/template/images/goods/listbg.png) no-repeat;
     border: none;
     padding: 0;
     height: 108px;
@@ -135,7 +150,7 @@
     line-height: 18px;
     font-size: 15px;
     color: #333333;
-    background: url(/template/images/goods/like.png) no-repeat left center;
+    background: url(/yiren/template/images/goods/like.png) no-repeat left center;
     padding-left: 24px;
     margin-top: 3px;
     color: #484848;
@@ -161,6 +176,21 @@
 
     width: 530px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -224,17 +254,17 @@
     margin-right: 5px;
 }
 .post-circle-bg .i-post-comment {
-    background: url(/template/images/goods/comment.png) no-repeat left center;
-    height: 18px;
-    width: 22px;
+    background: url(/yiren/template/images/goods/comment.png) no-repeat left center;
+    height: 25px;
+    width: 35px;
     display: inline-block;
     vertical-align: -3px;
     margin-right: 5px;
 }
 .post-circle-bg .i-post-scan {
-    background: url(/template/images/goods/look.png) no-repeat left center;
-    height: 18px;
-    width: 26px;
+    background: url(/yiren/template/images/goods/look.png) no-repeat left center;
+    height: 25px;
+    width: 35px;
     display: inline-block;
     vertical-align: -3px;
     margin-right: 5px;
@@ -412,6 +442,21 @@
 .weiba-article.postDetail p.gobuy a {
     color: red !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*指南列表页*/
 
@@ -640,7 +685,7 @@ a {
 .tjitem dd span {
     padding-left: 23px;
     font-size: 12px;
-    background: url(/template/images/goods/look.png) no-repeat left center;
+    background: url(./yiren/template/images/goods/look.png) no-repeat left center;
     background-size: auto auto;
     background-size: 41%;
 }
@@ -791,6 +836,21 @@ a {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*指南详情*/
 
 .st-index-right .question {
@@ -798,6 +858,21 @@ a {
     margin-bottom: 21px;
     margin-top: 0px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*指南列表新导航*/
 
@@ -909,11 +984,41 @@ a {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*指南栏目第三级类型选中状态*/
 
 .sel_jian {
     color: #e85c69;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*END*/
 
@@ -1039,6 +1144,21 @@ a {
     height: 34px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*type_listend*/
 
 .znsecond .listmone {
@@ -1051,6 +1171,21 @@ a {
     width: 100%;
     height: auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*指南三级列表*/
 
@@ -1188,6 +1323,21 @@ a {
     visibility: hidden;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*轮播图*/
 
 .rightTop-ad-box {
@@ -1275,6 +1425,21 @@ a {
     margin: 16px auto;
     line-height: 22px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*轮播图end*/
 

@@ -20,7 +20,7 @@ class ShopController extends Controller
     {
         $shops = Good::orderBy('id','desc')
         ->where('name','like', '%'.request()->keywords.'%')
-        ->paginate(2);
+        ->paginate(10);
         
 
         return view('admin.shop.index', ['shops' => $shops]);
@@ -60,11 +60,14 @@ class ShopController extends Controller
         $shop -> title = $request->title;
         $shop -> intro = $request->intro;
         $shop -> author = $request->author;
+        $shop -> aintro = $request->aintro;
 
         if ($request->hasFile('picture')) {
             $shop->picture = '/'.$request->picture->store('uploads/'.date('Ymd'));
         }
-
+        if ($request->hasFile('apic')) {
+            $shop->apic = '/'.$request->apic->store('uploads/'.date('Ymd'));
+        }
         if($shop -> save()){
             return redirect('/shop')->with('success', '添加成功');
         }else{
@@ -123,9 +126,13 @@ class ShopController extends Controller
         $shops -> price = $request->price;
         $shops -> sice = $request->sice;
         $shops -> cate_id = $request->cate_id;
+        $shops -> aintro = $request->aintro;
 
         if ($request->hasFile('picture')) {
             $shops->picture = '/'.$request->picture->store('uploads/'.date('Ymd'));
+        }
+         if ($request->hasFile('apic')) {
+            $shops->apic = '/'.$request->apic->store('uploads/'.date('Ymd'));
         }
 
         if($shops->save()){
@@ -150,5 +157,20 @@ class ShopController extends Controller
         }else{
             return back()->with('error','删除失败');
         }
+    }
+
+    /**
+     * 商品列表
+     */
+    public function list()
+    {
+        $cate = Cate::all();
+        $shops = Good::orderBy('id','desc')->get();
+        // dd($shops);
+        
+        /*if($cate['id'] == $shop['cate_id']){
+            $shops = Good::orderBy('id','desc')->get();
+        }*/
+        return view('home.shop.list', ['shops' => $shops, 'cate' => $cate]);
     }
 }

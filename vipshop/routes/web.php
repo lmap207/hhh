@@ -58,6 +58,18 @@ Route::get('/admin/logout','AdminController@logout');
 
 
 
+
+
+//前台路由
+//商品详情
+Route::get('/{id}.html', 'ShopController@show');
+
+//商品列表
+Route::get('/shops', 'ShopController@list');
+
+
+
+
 //在定
 
 //评论
