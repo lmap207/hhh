@@ -4,9 +4,9 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>原创丛林风牛仔半身裙，我已经被吸粉了_女装_好货_伊人私语女性社区</title>
+    <title>{{$shops->title}}</title>
     <meta content="百搭,A字裙,显腿长" name="keywords">
-    <meta content="原创丛林风牛仔半身裙，我已经被吸粉了" name="description">
+    <meta content="{{$shops->title}}" name="description">
     <link href="" type="image/x-icon" rel="shortcut icon">
     <!--当当前页面用手机打开的时候，跳转到手机端-->
     <script src="/yiren/js/common/Pc_Wap/uaredirect.js" type="text/javascript"></script>
@@ -98,20 +98,20 @@
             }
             </style>
             <!--微吧公共样式END-->
-            <div class="goodsnav">
-                <ul class="goodslist">
-                    <li class="active"><a href="/haohuo/270/" title="女装">女装</a></li>
-                    <li><a href="/haohuo/271/" title="配件">配件</a></li>
-                    <li><a href="/haohuo/272/" title="饰品">饰品</a></li>
-                    <li><a href="/haohuo/273/" title="护肤">护肤</a></li>
-                    <li><a href="/haohuo/274/" title="彩妆">彩妆</a></li>
-                    <li><a href="/haohuo/275/" title="私服">私服</a></li>
-                    <li><a href="/haohuo/276/" title="礼物">礼物</a></li>
-                    <li><a href="/haohuo/277/" title="数码">数码</a></li>
-                    <li><a href="/haohuo/278/" title="家居">家居</a></li>
-                </ul>
-                <div class="pubgoods" style='display:none;'><a href="javascript:;" title="发布">发布</a></div>
-            </div>
+            <!-- <div class="goodsnav">
+    <ul class="goodslist">
+        <li class="active"><a href="/haohuo/270/" title="女装">女装</a></li>
+        <li><a href="/haohuo/271/" title="配件">配件</a></li>
+        <li><a href="/haohuo/272/" title="饰品">饰品</a></li>
+        <li><a href="/haohuo/273/" title="护肤">护肤</a></li>
+        <li><a href="/haohuo/274/" title="彩妆">彩妆</a></li>
+        <li><a href="/haohuo/275/" title="私服">私服</a></li>
+        <li><a href="/haohuo/276/" title="礼物">礼物</a></li>
+        <li><a href="/haohuo/277/" title="数码">数码</a></li>
+        <li><a href="/haohuo/278/" title="家居">家居</a></li>
+    </ul>
+    <div class="pubgoods" style='display:none;'><a href="javascript:;" title="发布">发布</a></div>
+</div> -->
             <!-- 主体 -->
             <div id="body" class="body clearfix">
                 <div class="wrap resume-search" style="border:none;background:#fff;">
@@ -133,7 +133,7 @@
                                                     <dl class="writerinfo">
                                                         <dt><a title='{{$shops->author}}' href='javascript:void(0)'><img src="{{$shops->apic}}" alt="{{$shops->author}}"></a></dt>
                                                         <dd>
-                                                            <h5><a  title='{{$shops->author}}'  href='javascript:void(0)' ></a></h5>
+                                                            <h5><a  title='{{$shops->author}}'  href='javascript:void(0)' >{{$shops->author}}</a></h5>
                                                             <p>{{$shops->aintro}}...</p>
                                                         </dd>
                                                     </dl>
@@ -148,10 +148,16 @@
                                                 <div class="writer clearfix mb30">
                                                     <h4>相关文章</h4>
                                                     <ul model-node="related_ul_post" class="weiba-post-list">
+                                                        @foreach($tuijian as $v)
                                                         <li>
-                                                            <div class="aritleLeft"><a href='/haohuo/228.html' title='超萌时尚卡通小象usb鼠标' target='_blank'><img src="http://image01.xzhichang.com/recomend/goods/2018/07/20/180720055305618707.jpg" alt="超萌时尚卡通小象usb鼠标"></a></div>
-                                                            <div class="aritlerigt"><a href='/haohuo/228.html' title='超萌时尚卡通小象usb鼠标' target='_blank'>超萌时尚卡通小象usb鼠标</a></div>
+                                                            <div class="aritleLeft">
+                                                                <a href='/{{$v->id}}.html' title='{{$v->title}}' target='_blank'>
+                                                            <img src="{{$v->picture}}" alt="{{$v->title}}">
+                                                            </a>
+                                                            </div>
+                                                            <div class="aritlerigt"><a href="/{{$v->id}}.html" title="{{$v->title}}" target="_blank">{{$v->title}}</a></div>
                                                         </li>
+                                                        @endforeach
                                                     </ul>
                                                 </div>
                                             </div>
@@ -175,7 +181,7 @@
                                                         <div class="prev1" id="prev1"></div>
                                                         <div class="next1" id="next1"></div>
                                                         <ul>
-                                                            <li><a href="javascript:;" title="原创丛林风牛仔半身裙，我已经被吸粉了"><img alt="原创丛林风牛仔半身裙，我已经被吸粉了" src="{{$shops->picture}}" width="500" height="700"/></a></li>
+                                                            <li><a href="javascript:;" title="{{$shops->title}}"><img alt="{{$shops->title}}" src="{{$shops->picture}}" width="500"/></a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -186,56 +192,6 @@
                                                     </p>
                                                     <p class="gobuy"><span><a href='https://item.taobao.com/item.htm?id=567880561386&ali_trackid=2:mm_127439219_37112325_133756539:1530087531_381_533708689&pvid=10_223.72.87.81_1770_1525680225105' title='购买' target='_blank' rel="nofollow">点击这里去购买</a><i class="sppt"></i></span></p>
                                                 </div>
-                                                <div class="detail-bar left post-info-control"><span title="评论"><i class="i-post-comment"></i>0</span><span title="浏览"><i class="i-post-scan"></i>{{$shops->liulan}}</span> </div>
-                                                <div class="poster-control clearfix">
-                                                    <div class="right">
-                                                        <div class="third-party-list "><span>分享：<span class="bdsharebuttonbox" id="share" style="float: right;"><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a></span></span>
-                                                            </span>
-                                                        </div>
-                                                        </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="reply" id="reply">
-                                                <div class="feed_lists">
-                                                    <dl class="feed_list feed_comment">
-                                                        <dd class="content" style="border-top: #e5e6e7 1px solid;">
-                                                            <div class="clearfix pading" id="ajax_reply_list">
-                                                                <!-- 评论框 -->
-                                                                <div class="send_weibo" style="border:none;padding-bottom:0px">
-                                                                    <div class="box">
-                                                                        <!--评论框-->
-                                                                        <div class="input" model-node="comment_textarea">
-                                                                            <div class="input_before1" model-node="mini_editor">
-                                                                                <div id="myEditor" class="myeditor"></div>
-                                                                            </div>
-                                                                            <div class="action clearfix" style="width:100%;display:table;display:none">
-                                                                                <!---->
-                                                                                <div class="right" style="width:225px">
-                                                                                    <a href="javascript:void(0);" class="btn-green-small" event-node="do_weiba_reply" event-args="" onclick="reply_tiezi(this)">
-                                                  <span>评论</span>
-                                                </a>
-                                                                                </div>
-                                                                                <div class="clear"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <!-- 排序方式 -->
-                                                                <div class="weiba-sort f8 mb20">
-                                                                </div>
-                                                                <!--评论列表-->
-                                                                <div class="weiba-com" id="commentlist_2150">
-                                                                </div>
-                                                                <!--页码-->
-                                                                <div id="pagelistsss" style="margin-top: 24px;">
-                                                                </div>
-                                                                <!--页码/end-->
-                                                            </div>
-                                                        </dd>
-                                                    </dl>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -245,12 +201,12 @@
                     </div>
                 </div>
             </div>
-            <input type="hidden" id="hidtid" value="1877" />
+            <!--   <input type="hidden" id="hidtid" value="1877" />
             <!--加载公共弹层-->
             <link rel="stylesheet" type="text/css" href="/yiren/js/common/TanCeng/tc.css" media="screen" />
-            <div class="vdialog-modal"></div>
-            <div class="vdialog-modal1"></div>
-            <div id="dvMsgBox">
+            <!--   <div class="vdialog-modal"></div>
+            <div class="vdialog-modal1"></div> -->
+            <!--  <div id="dvMsgBox">
                 <div class="top">
                     <div class="right">
                         <div class="title" id="dvMsgTitle">消息</div>
@@ -271,8 +227,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="dvMsgBox1">
+            </div> -->
+            <!--  <div id="dvMsgBox1">
                 <div class="top">
                     <div class="right">
                         <div class="title" id="Div2">消息</div>
@@ -285,7 +241,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <script type="text/javascript" src="/yiren/js/common/TanCeng/tc.js"></script>
             <!--加载公共弹层END-->
             <!--添加表情-->
@@ -384,9 +340,9 @@
                 <div class="footer">
                     <h4>友情链接</h4>
                     <ul class="friendlink">
-                        <li><a href='http://bbs.xzhichang.com' title='猎头公司' target='_blank'>猎头公司</a></li>
-                        <li><a href='http://www.58trz.com' title='58投融资' target='_blank'>58投融资</a></li>
-                        <li><a href='http://www.xzhichang.com' title='X职场' target='_blank'>X职场</a></li>
+                        @foreach($links as $v)
+                        <li><a href='{{$v->url}}' title='{{$v->lname}}' target='_blank'>{{$v->lname}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -437,7 +393,7 @@
 <!--加载底部END-->
 <style type="text/css">
 .bdshare-button-style0-32 a {
-    background-image: url('./template/images/share/public_bg.png');
+    background-image: url('/yiren/template/images/share/public_bg.png');
     width: 42px;
     height: 42px;
     padding-left: 0;

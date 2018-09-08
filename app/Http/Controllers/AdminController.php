@@ -1,9 +1,5 @@
-
 <?php
-
 namespace App\Http\Controllers;
-
-
 use App\Setting;
 
 use App\User;

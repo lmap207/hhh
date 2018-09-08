@@ -1,0 +1,328 @@
+/*登录注册banner框*/
+
+.vdialog-modald {
+    filter: alpha(opacity=60);
+}
+
+.vdialog-modald {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    opacity: .6;
+    background-color: #000;
+}
+.vdialog-modald {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    display: none;
+}
+.commonlogin {
+    position: fixed;
+    top: 160px;
+    right: 50%;
+    margin-right: -150px;
+    width: 300px;
+    height: 330px;
+    background: #fff;
+    z-index: 2000
+}
+
+.hide {
+    display: none;
+}
+.commonlogin {
+    width: 300px;
+}
+.commonlogin .tabmenu {
+    position: relative;
+}
+.commonlogin .tabmenu span {
+    position: absolute;
+    right: -40px;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: #fff;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    color: #666;
+}
+.commonlogin li {
+    float: left;
+    width: 151px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: #357CA2;
+    cursor: pointer;
+}
+.commonlogin .selected {
+    background: #4E4E49;
+    width: 149px;
+    border: 0;
+    font-size: 14px;
+}
+.commonlogin .tabbox {
+    padding: 15px 15px;
+    color: #fff;
+}
+.commonlogin .tabbox a {
+    color: #666;
+}
+.commonlogin .auto_login_box {
+    padding: 15px 0;
+}
+.commonlogin .auto_login_box .auto_login {
+    float: left;
+    color: #666
+}
+.commonlogin .auto_login_box .auto_login input {
+    margin-right: 7px;
+    position: relative;
+    top: 2px;
+}
+.commonlogin .auto_login_box a {
+    float: right;
+}
+.commonlogin .login_box_input {
+    font-size: 12px;
+    color: #666;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 3px;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-indent: 1em;
+}
+.commonlogin .login_box_input.large {
+    width: 269px;
+}
+.commonlogin .login_box_input.short {
+    width: 84px;
+}
+.commonlogin .login_box_input.popreg {
+    border: 1px solid #E9E9E9;
+    width: 325px;
+}
+.commonlogin .login_box_input.popregshort {
+    border: 1px solid #E9E9E9;
+    width: 125px;
+}
+.commonlogin .control {
+    margin-bottom: 10px;
+    position: relative;
+}
+.commonlogin .control .login_error {
+    position: absolute;
+    top: -17px;
+    left: 0px;
+    padding: 0 10px;
+    line-height: 20px;
+    background-color: #f5c3bf;
+    color: #e75c00;
+    z-index: 15;
+    border-radius: 2px;
+}
+.commonlogin .control .login_error .error_arrow {
+    position: absolute;
+    left: 20px;
+    bottom: -15px;
+    width: 0;
+    height: 0;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #f5c3bf transparent transparent transparent;
+    z-index: 16;
+    _display: none;
+}
+.commonlogin .login_now_btn {
+    width: 269px;
+    height: 40px;
+    background-color: #FCA21A;
+    font-family: "Microsoft Yahei";
+    font-size: 20px;
+    color: #FFF;
+    cursor: pointer;
+}
+.commonlogin .login_now_btn.behover {
+    background-color: #E78900;
+}
+.commonlogin .reg_now_btn {
+    width: 269px;
+    height: 40px;
+    background-color: #0C95DD;
+    font-family: "Microsoft Yahei";
+    font-size: 20px;
+    color: #FFF;
+    cursor: pointer;
+}
+.commonlogin .reg_now_btn.cc {
+    background-color: #cccccc;
+}
+.commonlogin .reg_now_btn.behover {
+    background-color: #008DD7;
+}
+.commonlogin .login_box .regin_now {
+    padding: 9px 0;
+    border-bottom: 1px solid #ABA3A3;
+}
+.commonlogin .login_box .regin_now a {
+    color: #EDC100;
+    cursor: pointer;
+}
+.commonlogin .server_argee {
+    padding-top: 5px;
+}
+.commonlogin .server_argee .reg_log {
+    float: right;
+}
+.commonlogin .server_argee .reg_log a {
+    color: #EDC100;
+    cursor: pointer;
+}
+.commonlogin .argee {
+    float: left;
+    position: relative;
+    *top: -4px;
+}
+.commonlogin .argee a:hover {
+    color: #EDC100;
+    text-decoration: underline;
+}
+.commonlogin .argee .auto_login input {
+    margin-right: 7px;
+    position: relative;
+    top: 2px;
+}
+
+/*==========验证Validform===========*/
+
+.Validform_checktip {
+    margin-left: 8px;
+    line-height: 20px;
+    height: 20px;
+    overflow: hidden;
+    color: #999;
+    font-size: 12px;
+}
+.Validform_right {
+    color: #71b83d;
+    padding-left: 20px;
+    background: url(../images/right.png) no-repeat left center;
+}
+.Validform_wrong {
+    color: red;
+    padding-left: 20px;
+    white-space: nowrap;
+    background: url(../img/error.png) no-repeat left center;
+}
+.Validform_loading {
+    padding-left: 20px;
+    background: url(../images/onLoad.gif) no-repeat left center;
+}
+.Validform_error {
+    background-color: #ffe7e7;
+}
+#Validform_msg {
+    color: #7d8289;
+    font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+    width: 280px;
+    -webkit-box-shadow: 2px 2px 3px #aaa;
+    -moz-box-shadow: 2px 2px 3px #aaa;
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    z-index: 99999;
+    display: none;
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');
+}
+#Validform_msg .iframe {
+    position: absolute;
+    left: 0px;
+    top: -1px;
+    z-index: -1;
+}
+#Validform_msg .Validform_title {
+    line-height: 25px;
+    height: 25px;
+    text-align: left;
+    font-weight: bold;
+    padding: 0 8px;
+    color: #fff;
+    position: relative;
+    background-color: #000;
+}
+#Validform_msg a.Validform_close:link,
+#Validform_msg a.Validform_close:visited {
+    line-height: 22px;
+    position: absolute;
+    right: 8px;
+    top: 0px;
+    color: #fff;
+    text-decoration: none;
+}
+#Validform_msg a.Validform_close:hover {
+    color: #cc0;
+}
+#Validform_msg .Validform_info {
+    padding: 8px;
+    border: 1px solid #000;
+    border-top: none;
+    text-align: left;
+}
+.valid_info {
+    border: 1px solid #ccc;
+    padding: 2px 20px 2px 5px;
+    color: #666;
+    position: absolute;
+    display: none;
+    line-height: 20px;
+    background-color: #fff;
+}
+.valid_dec {
+    bottom: -8px;
+    display: block;
+    height: 8px;
+    overflow: hidden;
+    position: absolute;
+    left: 10px;
+    width: 17px;
+}
+.valid_dec s {
+    font-family: simsun;
+    font-size: 16px;
+    height: 19px;
+    left: 0;
+    line-height: 21px;
+    position: absolute;
+    text-decoration: none;
+    top: -9px;
+    width: 17px;
+}
+.valid_dec .dec1 {
+    color: #ccc;
+}
+.valid_dec .dec2 {
+    color: #fff;
+    top: -10px;
+}
+
+.commonlogin .regin_now {
+    padding: 9px 0;
+    border-bottom: 1px solid #ABA3A3;
+    color: #666
+}
+.commonlogin .regin_now a {
+    color: #EDC100;
+    cursor: pointer;
+}

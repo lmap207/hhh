@@ -58,6 +58,8 @@
     height: 0px;
 }
 
+
+
 /*鏅€氭寜閽�*/
 
 .edui-btn-toolbar .edui-btn {
@@ -73,14 +75,16 @@
     background: none;
 }
 .edui-btn-toolbar .edui-btn .edui-icon {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 35px;
     margin: 0;
     padding: 0;
     background-repeat: no-repeat;
-    background-image: url(../images/icons.png);
-    background-image: url(../images/icons.gif) \9;
+    background-image: url(/yiren/template/images/icons.png);
+    background-image: url(/yiren/template/images/icons.gif) \9;
 }
+
+
 
 
 /*鐘舵€佸弽灏�*/
@@ -245,14 +249,16 @@
     *zoom: 1;
     width: 8px;
     height: 20px;
-    background: url(../images/icons.png) -741px 0;
-    _background: url(../images/icons.gif) -741px 0;
+    background: url(/yiren/template/images/icons.png) -741px 0;
+    _background: url(/yiren/template/images/icons.gif) -741px 0;
 }
 
 .edui-btn-toolbar .edui-splitbutton,
 .edui-btn-toolbar .edui-splitbutton {
     _border: none;
 }
+
+
 
 
 /*鐘舵€佸弽灏�*/
@@ -312,8 +318,8 @@
     width: 12px;
     margin: 0;
     padding: 0;
-    background: url(../images/icons.png) -741px 0;
-    _background: url(../images/icons.gif) -741px 0;
+    background: url(/yiren/template/images/icons.png) -741px 0;
+    _background: url(/yiren/template/images/icons.gif) -741px 0;
 }
 .edui-btn-toolbar .edui-combobox.edui-disabled {
     opacity: 0.2;
@@ -367,11 +373,11 @@
     display: inline-block;
     *zoom: 1;
     *display: inline;
-    width: 24px;
-    height: 25px;
+    width: 30px;
+    height: 35px;
     background: red;
     vertical-align: bottom;
-    background: url(../images/ok.gif) no-repeat 1000px 1000px;
+    background: url(/yiren/template/images/ok.gif) no-repeat 1000px 1000px;
 }
 
 .edui-combobox-menu .edui-combobox-checked .edui-combobox-icon {
@@ -388,6 +394,8 @@
     margin: 5px 0;
     *margin-top: -8px;
 }
+
+
 
 
 /* 瀛椾綋鏍峰紡鏍℃ */
@@ -409,6 +417,8 @@
 }
 
 
+
+
 /* 24 */
 
 .edui-combobox-fontsize .edui-combobox-item-4 .edui-combobox-item-label {
@@ -419,6 +429,8 @@
 .edui-combobox-fontsize .edui-combobox-item-4.edui-combobox-checked .edui-combobox-icon {
     background-position: 10px 5px;
 }
+
+
 
 
 /* 32 */
@@ -434,12 +446,16 @@
 
 
 
+
+
 /* 48 */
 
 .edui-combobox-fontsize .edui-combobox-item-6 .edui-combobox-item-label {
     height: 47px;
     line-height: 47px;
 }
+
+
 
 
 /*.edui-combobox-fontsize .edui-combobox-item-6 .edui-combobox-icon {*/
@@ -484,6 +500,8 @@
 }
 
 
+
+
 /* h2 */
 
 .edui-combobox-paragraph .edui-combobox-item-2 .edui-combobox-item-label {
@@ -499,6 +517,8 @@
 .edui-combobox-paragraph .edui-combobox-item-2.edui-combobox-checked .edui-combobox-icon {
     background-position: 10px 10px;
 }
+
+
 
 
 /* h3 */
@@ -519,6 +539,8 @@
 }
 
 
+
+
 /* h4 */
 
 .edui-combobox-paragraph .edui-combobox-item-4 .edui-combobox-item-label {
@@ -532,11 +554,15 @@
 }
 
 
+
+
 /* h5 */
 
 .edui-combobox-paragraph .edui-combobox-item-5 .edui-combobox-item-label {
     font-size: 16px;
 }
+
+
 
 
 /* h6 */
@@ -560,12 +586,12 @@
 }
 .edui-modal-header .edui-close {
     float: right;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 35px;
     margin-top: 2px;
     padding: 1px;
     border: 0;
-    background: url("../images/close.png") no-repeat center center;
+    background: url("/yiren/template/images/close.png") no-repeat center center;
     cursor: pointer;
 }
 .edui-modal-header .edui-close.edui-hover {
@@ -627,12 +653,16 @@
     display: none;
 }
 
+
+
 /*鍥剧墖涓婁紶*/
 
 .edui-dialog-image-body {
     width: 700px;
     height: 400px;
 }
+
+
 
 /*鎻掑叆瑙嗛*/
 
@@ -641,12 +671,16 @@
     height: 350px;
 }
 
+
+
 /*璋锋瓕鍦板浘*/
 
 .edui-dialog-gmap-body {
     width: 550px;
     height: 400px;
 }
+
+
 
 
 /*鐧惧害鍦板浘*/
@@ -657,6 +691,8 @@
 }
 
 
+
+
 /*閾炬帴*/
 
 .edui-dialog-link-body {
@@ -665,7 +701,7 @@
 }
 .edui-popup {
     display: none;
-    background: url('../images/pop-bg.png') repeat #fff;
+    background: url('/yiren/template/images/pop-bg.png') repeat #fff;
     padding: 2px;
 }
 .edui-popup .edui-popup-body {
@@ -677,10 +713,10 @@
     height: 11px;
 }
 .edui-popup .edui-popup-caret.up {
-    background: url('../images/caret.png') no-repeat 0 0;
+    background: url('/yiren/template/images/caret.png') no-repeat 0 0;
 }
 .edui-popup .edui-popup-caret.down {
-    background: url('../images/caret.png') no-repeat 0 0;
+    background: url('/yiren/template/images/caret.png') no-repeat 0 0;
 }
 
 
@@ -823,8 +859,8 @@
     width: 2px;
     height: 20px;
     padding: 1px 2px;
-    background: url(../images/icons.png) -179px 1px;
-    background: url(../images/icons.gif) -179px 1px \9;
+    background: url(/yiren/template/images/icons.png) -179px 1px;
+    background: url(/yiren/template/images/icons.gif) -179px 1px \9;
     display: inline-block;
     vertical-align: top;
     *display: inline;
